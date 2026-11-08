@@ -22,7 +22,7 @@ cd algorithm-presentation
 | Git | 任意仍受支持的近期版本 | 分支、提交和 Pull Request |
 | 桌面浏览器 | 推荐最新版 Edge、Chrome 或 Firefox | 离线放映；WebGL 兼容性最好 |
 
-项目只使用 Python 标准库和 Node 内置模块，**不要运行 `pip install` 或 `npm install`，仓库没有需要安装的项目包依赖**。
+基础算法、HTML 构建和项目检查只使用 Python 标准库和 Node 内置模块，**不需要运行 `pip install` 或 `npm install`**。PDF 导出是独立的可选流程，需要浏览器渲染工具，具体配置见 [PDF 预览说明](ppt/qa/pdf-preview.md)。不要为基础流程安装导出专用依赖。
 
 先核对版本：
 
@@ -95,12 +95,21 @@ git --version
 
 `ppt/assets/template-swiss.source.html` 是本地模板快照。最终 HTML 不访问外部技能目录、CDN、远程字体或三维 API。
 
+### AI 修改 PPT：必须使用 guizang-ppt-skill
+
+修改 PPT 内容、版式、样式、动效、代码展示或演讲者/观众屏交互前，AI Agent 必须显式使用 **`guizang-ppt-skill`**，先读取其 `SKILL.md`，再按任务读取瑞士风版式、主题、演讲者模式及检查规范。这不是可选建议；仓库中已保存模板也不能替代技能工作流。
+
+技能来源为 <https://github.com/op7418/guizang-ppt-skill>。按各自 Agent 的技能安装机制配置，确认它能找到该名称；不要把自己的安装绝对路径提交到项目。若不可用，应先如实说明并协助配置。用户已经确定的 18 页、全白主题、蓝黑灰配色和三维演示要求优先于模板默认设计。
+
+放映成品、仅运行现有构建/测试或开发不涉及 PPT 设计的 Python 算法，不要求安装技能。该区别保证维护遵循设计流程，同时不让技能成为离线放映或基础检查的运行依赖。完整维护入口见 [ppt/README.md](ppt/README.md)。
+
 ## 4. 不要手改生成物
 
 以下文件由命令生成，不应直接手工维护：
 
 - `ppt/index.html`
 - `ppt/slide-plan.json`
+- `ppt/preview.pdf`（PDF 静态预览，导出方式见 [PDF 预览说明](ppt/qa/pdf-preview.md)）
 - `demo/output/data.json`
 - `demo/output/data.js`
 - `demo/output/*.csv`
@@ -202,16 +211,17 @@ python demo/generate.py --quick
 [列出允许编辑的源文件或目录]
 
 约束：
+- 若任务涉及 PPT 内容、版式、样式、动效、代码展示或演讲者/观众屏交互，必须显式使用 guizang-ppt-skill，先读 SKILL.md 及相关参考，再实施修改。
 - 保持一般 d 维推导、18 页白色主题和 Python 轨迹 -> JSON -> Three.js 回放边界。
 - 不手改 ppt/index.html、ppt/slide-plan.json、demo/output/data.json、demo/output/data.js、CSV 或 SVG；通过源文件和构建命令更新。
-- 不运行 pip/npm 安装项目依赖，不引入远程 CDN、字体或三维服务。
+- 基础流程不运行 pip/npm 安装项目依赖；PDF 导出专用可选环境按其说明配置，不引入远程 CDN、字体或三维服务。
 - 不改动或删除 ppt/assets/ 中的第三方许可证。
 - 除非任务明确要求刷新正式实验，不运行 demo/generate.py，也不使用 --quick 生成提交数据。
 - 按“先测试、再构建、最后只读检查”的顺序工作；例行测试和构建无需逐项请求人工审批。
 
 工作流程：
 1. 检查 git status，先保护用户已有改动。
-2. 定位源文件和受影响的数据契约，作出最小修改。
+2. 涉及 PPT 时先加载 guizang-ppt-skill；定位源文件和受影响的数据契约，作出最小修改。
 3. 运行 python -m unittest demo/test_kdtree.py demo/test_teaching.py -v。
 4. 若改了 PPT 文案、样式、教学代码或回放，运行 python scripts/check_project.py --build；若改了算法或正式实验数据，先确认是否需要运行 python demo/generate.py，再构建。
 5. 运行 python scripts/check_project.py，并执行任务要求的离线浏览器验收。
@@ -223,7 +233,7 @@ python demo/generate.py --quick
 - 不把静态检查、历史记录或“应当可用”等同于完整双屏、WebGL、演讲者模式验收。
 ```
 
-如果只做一个小改动，可以缩短模板，但必须保留“源文件与生成物边界、最小测试集、实际验收、未完成项”四项信息。
+如果只做一个小改动，可以缩短模板，但必须保留“源文件与生成物边界、最小测试集、实际验收、未完成项”，以及涉及 PPT 时必须使用 guizang-ppt-skill 的要求。
 
 ## 8. 分支、提交与 Pull Request
 
@@ -301,7 +311,7 @@ Windows 优先使用 `py -3.12` 创建虚拟环境；macOS/Linux 使用 `python3
 
 **提示缺少包**
 
-先确认虚拟环境已激活且 Python 版本正确。项目没有 `requirements.txt` 或 `package.json` 依赖；不要用 `pip install` 或 `npm install` 绕过源码问题。
+先确认虚拟环境已激活且 Python 版本正确。基础流程没有 `requirements.txt` 或 `package.json` 依赖，不要用安装包绕过源码问题。若是 PDF 导出报缺少渲染工具，则按独立的导出说明配置其可选环境。
 
 **`node` 不存在，但只想放映**
 

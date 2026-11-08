@@ -9,6 +9,7 @@
 | 你的任务 | 入口 |
 |---|---|
 | 直接看 PPT、上台演示 | [ppt/index.html](ppt/index.html)，下载到本地后用浏览器打开 |
+| 静态预览全部页面 | [PDF 预览](ppt/preview.pdf)，不包含交互操作 |
 | 准备演讲、排练与答问 | [逐页讲稿](docs/kdtree-speaker-script.md) |
 | 理解内容、公式、证明与案例 | [汇报内容文档](docs/kdtree-report.md) |
 | 请 AI Agent 配环境或改项目 | 先让它读 [AGENTS.md](AGENTS.md)，再按 [CONTRIBUTING.md](CONTRIBUTING.md) 操作 |
@@ -42,7 +43,7 @@ cd algorithm-presentation
 
 > 请先阅读 AGENTS.md、CONTRIBUTING.md 和 README.md，检查本机 Python、Node.js 与 Git。使用本项目的实际依赖配置环境，不新增不必要的包。运行 python scripts/check_project.py，解释检查结果与尚需人工验证的部分。随后完成我的具体任务：[在这里填写要修改的页面、算法或演示效果]。
 
-详细环境步骤、虚拟环境、分支与 PR 流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。本项目不要求同学安装特定 AI Agent、插件或 guizang-ppt-skill；模板与三维资源已在仓库内。
+详细环境步骤、虚拟环境、分支与 PR 流程见 [CONTRIBUTING.md](CONTRIBUTING.md)。只放映、运行现有测试或构建不需要安装技能；**用 AI 修改 PPT 时必须显式使用 `guizang-ppt-skill`**，按 [PPT 维护规范](ppt/README.md) 先读取技能及相关参考。技能来源为 <https://github.com/op7418/guizang-ppt-skill>，通过所用 Agent 的技能机制配置，不将个人安装路径写入项目。
 
 ## 开发环境与一键检查
 
@@ -53,7 +54,7 @@ cd algorithm-presentation
 | Git | 克隆和协作 |
 | 支持 WebGL 的桌面浏览器 | 三维回放与现场演示 |
 
-已在 Python 3.12.7、Node.js 24.18.0 下验证。**没有需要安装的第三方 Python 包或 npm 项目依赖**，不需要执行 `pip install` 或 `npm install`。
+已在 Python 3.12.7、Node.js 24.18.0 下验证。**基础算法、HTML 构建和项目检查没有需要安装的第三方 Python/npm 包**，无需执行 `pip install` 或 `npm install`。PDF 导出另外使用可选的浏览器渲染环境，见 [PDF 预览说明](ppt/qa/pdf-preview.md)，不影响上述基础流程。
 
 在仓库根目录运行：
 
@@ -115,12 +116,15 @@ ppt/
   viz.js                        Three.js / SVG 回放与交互
   build_deck.py                 单 HTML 打包脚本
   index.html                    离线成品（由脚本生成）
+  preview.pdf                   PDF 静态预览（导出产物）
   slide-plan.json               页面 ID、版式与时间计划（生成）
   assets/                       本地模板、Three.js 与许可证
   qa/verification.md            验证记录
 ```
 
 `demo/output/`、`ppt/index.html` 和 `ppt/slide-plan.json` 随源码提交，便于直接演示。应修改源码并重新生成，不要手改输出文件。教学代码从 `demo/teaching.py` 提取，文案改动要同步内容文档与讲稿。
+
+PDF 为静态预览，三维演示使用选定步骤的画面；播放、旋转和演讲者模式仍需 HTML。导出方法、可选导出环境与本次检查见 [PDF 预览说明](ppt/qa/pdf-preview.md)。修改 PPT 后应同步重新导出预览，不直接编辑 PDF。
 
 ## 内容与实现约定
 
