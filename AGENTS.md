@@ -17,7 +17,7 @@
 
 建议 Python 3.12+（代码语法最低 3.10）、Node.js 22+、Git，以及支持 WebGL 的桌面浏览器。已在 Python 3.12.7、Node.js 24.18.0 下运行。Node.js 只在构建和检查时使用，演示不需要后端服务。
 
-项目没有第三方 Python 包或 npm 项目依赖。不需要 `pip install`、`npm install`，也不要为启动项目凭空创建依赖清单。虚拟环境可选，建立方式见 `CONTRIBUTING.md`。
+基础算法、HTML 构建和项目检查没有第三方 Python/npm 包依赖。不需要 `pip install`、`npm install`，也不要为启动这些流程凭空创建依赖清单。PDF 导出使用独立的可选浏览器渲染环境，要求见 `ppt/qa/pdf-preview.md`。虚拟环境可选，建立方式见 `CONTRIBUTING.md`。
 
 在仓库根目录执行：
 
@@ -49,11 +49,15 @@ python scripts/check_project.py --build
 | 逐页完整内容 | `docs/kdtree-report.md` | 与 PPT 同步 |
 | 演讲者逐页口播 | `docs/kdtree-speaker-script.md` | 核对页码、演示步骤与时间 |
 
-`ppt/assets/` 已包含本地模板与 Three.js，不要求另装 guizang-ppt-skill。若环境具有该技能，可辅助制作和校验，但不要依赖个人机器的技能绝对路径才能构建。保留第三方代码与许可证，不为普通文案修改升级或重写这些资源。
+**用 AI 维护 PPT 时必须显式使用 `guizang-ppt-skill`。** 修改页面内容、版式、样式、动效、代码展示或演讲者/观众屏交互前，先读取该技能的 `SKILL.md`，再按任务读取瑞士风版式、主题、演讲者模式与校验规范。向用户说明本次使用该技能，不得只因为已有模板就绕过技能流程。用户已确定的 18 页、全白主题和三维算法展示要求优先于技能默认设置。
+
+技能来源：<https://github.com/op7418/guizang-ppt-skill>。由所用 AI Agent 的技能机制安装或加载，保持名称 `guizang-ppt-skill`；不要把某位同学机器上的技能绝对路径写入构建脚本。技能不可用时先说明缺失并协助配置，不能假称已使用；不依赖它的算法工作可继续。
+
+仅放映已生成 HTML、运行现有测试或不改变设计的重新构建，不需要安装技能。`ppt/assets/` 的本地模板与 Three.js 保证构建、放映独立于技能目录；这不免除 AI 维护 PPT 时使用技能的要求。保留第三方代码与许可证，不为普通文案修改升级或重写这些资源。
 
 ## 数据与生成规则
 
-以下是需要随源码一并提交的生成产物：`demo/output/`、`ppt/index.html`、`ppt/slide-plan.json`。不要直接手改它们来掩盖源码问题。
+以下是需要随源码一并提交的生成产物：`demo/output/`、`ppt/index.html`、`ppt/slide-plan.json`、`ppt/preview.pdf`。不要直接手改它们来掩盖源码问题。修改 PPT 后还应按 `ppt/qa/pdf-preview.md` 同步导出 PDF，核对页数、比例、代码、公式和三维静态画面。PDF 导出环境为可选工具，不是基础构建与离线放映的运行依赖。
 
 ```text
 python demo/generate.py

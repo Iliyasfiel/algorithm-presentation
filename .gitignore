@@ -12,3 +12,4 @@ Thumbs.db
 ppt/qa/round-*.mjs
 ppt/qa/*.png
 ppt/qa/*.jpg
+tmp/pdfs/
