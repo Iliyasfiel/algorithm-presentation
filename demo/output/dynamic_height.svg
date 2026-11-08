@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img">
+<title>Monotonic insertion: tree height</title>
+<style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#1f2937}.title{font-size:24px;font-weight:700}.axis{font-size:14px;fill:#374151}.tick{font-size:12px;fill:#4b5563}.grid{stroke:#d1d5db;stroke-width:1}.frame{fill:#ffffff;stroke:#9ca3af;stroke-width:1.5}.line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect width="960" height="560" fill="#ffffff"/>
+<text class="title" x="82" y="38">Monotonic insertion: tree height</text>
+<rect class="frame" x="82" y="112" width="844" height="376"/>
+<line class="grid" x1="82" y1="488.00" x2="926" y2="488.00"/>
+<text class="tick" x="70" y="492.00" text-anchor="end">0</text>
+<line class="grid" x1="82" y1="412.80" x2="926" y2="412.80"/>
+<text class="tick" x="70" y="416.80" text-anchor="end">6.70</text>
+<line class="grid" x1="82" y1="337.60" x2="926" y2="337.60"/>
+<text class="tick" x="70" y="341.60" text-anchor="end">13.4</text>
+<line class="grid" x1="82" y1="262.40" x2="926" y2="262.40"/>
+<text class="tick" x="70" y="266.40" text-anchor="end">20.1</text>
+<line class="grid" x1="82" y1="187.20" x2="926" y2="187.20"/>
+<text class="tick" x="70" y="191.20" text-anchor="end">26.8</text>
+<line class="grid" x1="82" y1="112.00" x2="926" y2="112.00"/>
+<text class="tick" x="70" y="116.00" text-anchor="end">33.5</text>
+<line class="grid" x1="82.00" y1="112" x2="82.00" y2="488"/>
+<text class="tick" x="82.00" y="512" text-anchor="middle">1</text>
+<line class="grid" x1="194.53" y1="112" x2="194.53" y2="488"/>
+<text class="tick" x="194.53" y="512" text-anchor="middle">5</text>
+<line class="grid" x1="307.07" y1="112" x2="307.07" y2="488"/>
+<text class="tick" x="307.07" y="512" text-anchor="middle">9</text>
+<line class="grid" x1="419.60" y1="112" x2="419.60" y2="488"/>
+<text class="tick" x="419.60" y="512" text-anchor="middle">13</text>
+<line class="grid" x1="532.13" y1="112" x2="532.13" y2="488"/>
+<text class="tick" x="532.13" y="512" text-anchor="middle">17</text>
+<line class="grid" x1="644.67" y1="112" x2="644.67" y2="488"/>
+<text class="tick" x="644.67" y="512" text-anchor="middle">21</text>
+<line class="grid" x1="757.20" y1="112" x2="757.20" y2="488"/>
+<text class="tick" x="757.20" y="512" text-anchor="middle">25</text>
+<line class="grid" x1="869.73" y1="112" x2="869.73" y2="488"/>
+<text class="tick" x="869.73" y="512" text-anchor="middle">29</text>
+<line class="grid" x1="926.00" y1="112" x2="926.00" y2="488"/>
+<text class="tick" x="926.00" y="512" text-anchor="middle">31</text>
+<line class="line" x1="82" y1="62" x2="110" y2="62" stroke="#dc2626"/>
+<text class="axis" x="118" y="66">Plain insertion</text>
+<polyline class="line" points="82.00,476.77 110.13,465.54 138.27,454.31 166.40,443.08 194.53,431.85 222.67,420.62 250.80,409.39 278.93,398.16 307.07,386.92 335.20,375.69 363.33,364.46 391.47,353.23 419.60,342.00 447.73,330.77 475.87,319.54 504.00,308.31 532.13,297.08 560.27,285.85 588.40,274.62 616.53,263.39 644.67,252.16 672.80,240.93 700.93,229.70 729.07,218.47 757.20,207.24 785.33,196.00 813.47,184.77 841.60,173.54 869.73,162.31 897.87,151.08 926.00,139.85" stroke="#dc2626"/>
+<circle cx="82.00" cy="476.77" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=1 · Height in nodes=1.00</title></circle>
+<circle cx="110.13" cy="465.54" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=2 · Height in nodes=2.00</title></circle>
+<circle cx="138.27" cy="454.31" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=3 · Height in nodes=3.00</title></circle>
+<circle cx="166.40" cy="443.08" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=4 · Height in nodes=4.00</title></circle>
+<circle cx="194.53" cy="431.85" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=5 · Height in nodes=5.00</title></circle>
+<circle cx="222.67" cy="420.62" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=6 · Height in nodes=6.00</title></circle>
+<circle cx="250.80" cy="409.39" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=7 · Height in nodes=7.00</title></circle>
+<circle cx="278.93" cy="398.16" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=8 · Height in nodes=8.00</title></circle>
+<circle cx="307.07" cy="386.92" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=9 · Height in nodes=9.00</title></circle>
+<circle cx="335.20" cy="375.69" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=10 · Height in nodes=10.0</title></circle>
+<circle cx="363.33" cy="364.46" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=11 · Height in nodes=11.0</title></circle>
+<circle cx="391.47" cy="353.23" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=12 · Height in nodes=12.0</title></circle>
+<circle cx="419.60" cy="342.00" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=13 · Height in nodes=13.0</title></circle>
+<circle cx="447.73" cy="330.77" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=14 · Height in nodes=14.0</title></circle>
+<circle cx="475.87" cy="319.54" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=15 · Height in nodes=15.0</title></circle>
+<circle cx="504.00" cy="308.31" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=16 · Height in nodes=16.0</title></circle>
+<circle cx="532.13" cy="297.08" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=17 · Height in nodes=17.0</title></circle>
+<circle cx="560.27" cy="285.85" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=18 · Height in nodes=18.0</title></circle>
+<circle cx="588.40" cy="274.62" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=19 · Height in nodes=19.0</title></circle>
+<circle cx="616.53" cy="263.39" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=20 · Height in nodes=20.0</title></circle>
+<circle cx="644.67" cy="252.16" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=21 · Height in nodes=21.0</title></circle>
+<circle cx="672.80" cy="240.93" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=22 · Height in nodes=22.0</title></circle>
+<circle cx="700.93" cy="229.70" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=23 · Height in nodes=23.0</title></circle>
+<circle cx="729.07" cy="218.47" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=24 · Height in nodes=24.0</title></circle>
+<circle cx="757.20" cy="207.24" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=25 · Height in nodes=25.0</title></circle>
+<circle cx="785.33" cy="196.00" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=26 · Height in nodes=26.0</title></circle>
+<circle cx="813.47" cy="184.77" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=27 · Height in nodes=27.0</title></circle>
+<circle cx="841.60" cy="173.54" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=28 · Height in nodes=28.0</title></circle>
+<circle cx="869.73" cy="162.31" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=29 · Height in nodes=29.0</title></circle>
+<circle cx="897.87" cy="151.08" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=30 · Height in nodes=30.0</title></circle>
+<circle cx="926.00" cy="139.85" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Plain insertion · Inserted point count n=31 · Height in nodes=31.0</title></circle>
+<line class="line" x1="82" y1="80" x2="110" y2="80" stroke="#2563eb"/>
+<text class="axis" x="118" y="84">Alpha rebuild</text>
+<polyline class="line" points="82.00,476.77 110.13,465.54 138.27,454.31 166.40,443.08 194.53,454.31 222.67,454.31 250.80,443.08 278.93,431.85 307.07,420.62 335.20,431.85 363.33,431.85 391.47,431.85 419.60,443.08 447.73,443.08 475.87,431.85 504.00,420.62 532.13,409.39 560.27,420.62 588.40,420.62 616.53,420.62 644.67,420.62 672.80,409.39 700.93,398.16 729.07,420.62 757.20,420.62 785.33,409.39 813.47,398.16 841.60,409.39 869.73,431.85 897.87,431.85 926.00,420.62" stroke="#2563eb"/>
+<circle cx="82.00" cy="476.77" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=1 · Height in nodes=1.00</title></circle>
+<circle cx="110.13" cy="465.54" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=2 · Height in nodes=2.00</title></circle>
+<circle cx="138.27" cy="454.31" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=3 · Height in nodes=3.00</title></circle>
+<circle cx="166.40" cy="443.08" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=4 · Height in nodes=4.00</title></circle>
+<circle cx="194.53" cy="454.31" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=5 · Height in nodes=3.00</title></circle>
+<circle cx="222.67" cy="454.31" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=6 · Height in nodes=3.00</title></circle>
+<circle cx="250.80" cy="443.08" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=7 · Height in nodes=4.00</title></circle>
+<circle cx="278.93" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=8 · Height in nodes=5.00</title></circle>
+<circle cx="307.07" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=9 · Height in nodes=6.00</title></circle>
+<circle cx="335.20" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=10 · Height in nodes=5.00</title></circle>
+<circle cx="363.33" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=11 · Height in nodes=5.00</title></circle>
+<circle cx="391.47" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=12 · Height in nodes=5.00</title></circle>
+<circle cx="419.60" cy="443.08" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=13 · Height in nodes=4.00</title></circle>
+<circle cx="447.73" cy="443.08" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=14 · Height in nodes=4.00</title></circle>
+<circle cx="475.87" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=15 · Height in nodes=5.00</title></circle>
+<circle cx="504.00" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=16 · Height in nodes=6.00</title></circle>
+<circle cx="532.13" cy="409.39" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=17 · Height in nodes=7.00</title></circle>
+<circle cx="560.27" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=18 · Height in nodes=6.00</title></circle>
+<circle cx="588.40" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=19 · Height in nodes=6.00</title></circle>
+<circle cx="616.53" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=20 · Height in nodes=6.00</title></circle>
+<circle cx="644.67" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=21 · Height in nodes=6.00</title></circle>
+<circle cx="672.80" cy="409.39" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=22 · Height in nodes=7.00</title></circle>
+<circle cx="700.93" cy="398.16" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=23 · Height in nodes=8.00</title></circle>
+<circle cx="729.07" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=24 · Height in nodes=6.00</title></circle>
+<circle cx="757.20" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=25 · Height in nodes=6.00</title></circle>
+<circle cx="785.33" cy="409.39" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=26 · Height in nodes=7.00</title></circle>
+<circle cx="813.47" cy="398.16" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=27 · Height in nodes=8.00</title></circle>
+<circle cx="841.60" cy="409.39" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=28 · Height in nodes=7.00</title></circle>
+<circle cx="869.73" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=29 · Height in nodes=5.00</title></circle>
+<circle cx="897.87" cy="431.85" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=30 · Height in nodes=5.00</title></circle>
+<circle cx="926.00" cy="420.62" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>Alpha rebuild · Inserted point count n=31 · Height in nodes=6.00</title></circle>
+<line class="line" x1="472" y1="62" x2="500" y2="62" stroke="#7c3aed"/>
+<text class="axis" x="508" y="66">Cumulative rebuilds</text>
+<polyline class="line" points="82.00,488.00 110.13,488.00 138.27,488.00 166.40,488.00 194.53,476.77 222.67,476.77 250.80,476.77 278.93,476.77 307.07,476.77 335.20,465.54 363.33,465.54 391.47,454.31 419.60,443.08 447.73,443.08 475.87,443.08 504.00,443.08 532.13,443.08 560.27,431.85 588.40,431.85 616.53,420.62 644.67,420.62 672.80,420.62 700.93,420.62 729.07,409.39 757.20,409.39 785.33,409.39 813.47,409.39 841.60,398.16 869.73,386.92 897.87,386.92 926.00,386.92" stroke="#7c3aed"/>
+<circle cx="82.00" cy="488.00" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=1 · Height in nodes=0</title></circle>
+<circle cx="110.13" cy="488.00" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=2 · Height in nodes=0</title></circle>
+<circle cx="138.27" cy="488.00" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=3 · Height in nodes=0</title></circle>
+<circle cx="166.40" cy="488.00" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=4 · Height in nodes=0</title></circle>
+<circle cx="194.53" cy="476.77" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=5 · Height in nodes=1.00</title></circle>
+<circle cx="222.67" cy="476.77" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=6 · Height in nodes=1.00</title></circle>
+<circle cx="250.80" cy="476.77" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=7 · Height in nodes=1.00</title></circle>
+<circle cx="278.93" cy="476.77" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=8 · Height in nodes=1.00</title></circle>
+<circle cx="307.07" cy="476.77" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=9 · Height in nodes=1.00</title></circle>
+<circle cx="335.20" cy="465.54" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=10 · Height in nodes=2.00</title></circle>
+<circle cx="363.33" cy="465.54" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=11 · Height in nodes=2.00</title></circle>
+<circle cx="391.47" cy="454.31" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=12 · Height in nodes=3.00</title></circle>
+<circle cx="419.60" cy="443.08" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=13 · Height in nodes=4.00</title></circle>
+<circle cx="447.73" cy="443.08" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=14 · Height in nodes=4.00</title></circle>
+<circle cx="475.87" cy="443.08" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=15 · Height in nodes=4.00</title></circle>
+<circle cx="504.00" cy="443.08" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=16 · Height in nodes=4.00</title></circle>
+<circle cx="532.13" cy="443.08" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=17 · Height in nodes=4.00</title></circle>
+<circle cx="560.27" cy="431.85" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=18 · Height in nodes=5.00</title></circle>
+<circle cx="588.40" cy="431.85" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=19 · Height in nodes=5.00</title></circle>
+<circle cx="616.53" cy="420.62" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=20 · Height in nodes=6.00</title></circle>
+<circle cx="644.67" cy="420.62" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=21 · Height in nodes=6.00</title></circle>
+<circle cx="672.80" cy="420.62" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=22 · Height in nodes=6.00</title></circle>
+<circle cx="700.93" cy="420.62" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=23 · Height in nodes=6.00</title></circle>
+<circle cx="729.07" cy="409.39" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=24 · Height in nodes=7.00</title></circle>
+<circle cx="757.20" cy="409.39" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=25 · Height in nodes=7.00</title></circle>
+<circle cx="785.33" cy="409.39" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=26 · Height in nodes=7.00</title></circle>
+<circle cx="813.47" cy="409.39" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=27 · Height in nodes=7.00</title></circle>
+<circle cx="841.60" cy="398.16" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=28 · Height in nodes=8.00</title></circle>
+<circle cx="869.73" cy="386.92" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=29 · Height in nodes=9.00</title></circle>
+<circle cx="897.87" cy="386.92" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=30 · Height in nodes=9.00</title></circle>
+<circle cx="926.00" cy="386.92" r="4" fill="#ffffff" stroke="#7c3aed" stroke-width="2"><title>Cumulative rebuilds · Inserted point count n=31 · Height in nodes=9.00</title></circle>
+<text class="axis" x="504.0" y="538" text-anchor="middle">Inserted point count n</text>
+<text class="axis" transform="translate(22 300.0) rotate(-90)" text-anchor="middle">Height in nodes</text>
+</svg>

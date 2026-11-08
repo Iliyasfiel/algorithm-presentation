@@ -1,0 +1,5 @@
+suite,n,d,queries,build_ms_median,range_kd_ms_per_query,range_brute_ms_per_query,range_speedup_kd_over_brute,range_mean_visited_nodes,range_median_visited_nodes,range_visited_ratio,range_mean_reported_points,nearest_kd_ms_per_query,nearest_brute_ms_per_query,nearest_speedup_kd_over_brute,nearest_mean_visited_nodes,nearest_median_visited_nodes,nearest_visited_ratio,range_results_match_brute,count_results_match_brute,nearest_results_match_brute,tree_metadata_valid
+size,250,3,20,0.8748,0.04613,0.098665,2.138847,33,33.0,0.132,3.7,0.023935,0.278155,11.621266,22.8,20.0,0.0912,True,True,True,True
+size,500,3,20,1.3643,0.04409,0.197035,4.468927,40.65,39.0,0.0813,7.85,0.024285,0.553925,22.809347,23.5,20.0,0.047,True,True,True,True
+size,1000,3,20,3.0177,0.08799,0.428105,4.865382,77.25,77.5,0.07725,15.85,0.029235,1.12462,38.468274,27.95,23.0,0.02795,True,True,True,True
+size,2000,3,20,6.5418,0.138055,0.824755,5.974105,117.2,119.5,0.0586,31.45,0.03624,2.284265,63.031595,32.4,31.0,0.0162,True,True,True,True

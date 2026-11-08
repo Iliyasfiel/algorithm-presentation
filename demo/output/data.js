@@ -1,0 +1,26501 @@
+window.KD_DATA = {
+  "meta": {
+    "title": "Python KD-tree 3D demonstration",
+    "schemaVersion": 1,
+    "generatedAtUtc": "2026-11-08T09:30:26+00:00",
+    "dimension": 3,
+    "pointCount": 15,
+    "buildTraversal": "preorder: root, left subtree, right subtree",
+    "rangeIntervals": "closed",
+    "rangeResultOrder": "traversal order from range_report; no ID ordering guarantee",
+    "rangeEventIds": "prune_disjoint and accept_subtree expose sorted full-subtree IDs in ids and subtreeIds",
+    "coordinateTieBreak": "point id (lexicographic ascending)",
+    "nearestTieBreak": "smallest squared distance, then point id",
+    "dynamicTreeSnapshots": "Every dynamic step includes complete plainTree and balancedTree snapshots.",
+    "benchmarkNotice": "All timing and visited-node values were measured on generation; rerun and compare using the same environment."
+  },
+  "points": [
+    {
+      "id": "A",
+      "coords": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": "B",
+      "coords": [
+        5,
+        4,
+        2
+      ]
+    },
+    {
+      "id": "C",
+      "coords": [
+        9,
+        6,
+        7
+      ]
+    },
+    {
+      "id": "D",
+      "coords": [
+        4,
+        7,
+        9
+      ]
+    },
+    {
+      "id": "E",
+      "coords": [
+        8,
+        1,
+        5
+      ]
+    },
+    {
+      "id": "F",
+      "coords": [
+        7,
+        2,
+        8
+      ]
+    },
+    {
+      "id": "G",
+      "coords": [
+        1,
+        8,
+        6
+      ]
+    },
+    {
+      "id": "H",
+      "coords": [
+        3,
+        5,
+        1
+      ]
+    },
+    {
+      "id": "I",
+      "coords": [
+        6,
+        9,
+        3
+      ]
+    },
+    {
+      "id": "J",
+      "coords": [
+        10,
+        14,
+        12
+      ]
+    },
+    {
+      "id": "K",
+      "coords": [
+        12,
+        10,
+        15
+      ]
+    },
+    {
+      "id": "L",
+      "coords": [
+        14,
+        12,
+        10
+      ]
+    },
+    {
+      "id": "M",
+      "coords": [
+        11,
+        15,
+        13
+      ]
+    },
+    {
+      "id": "N",
+      "coords": [
+        15,
+        13,
+        11
+      ]
+    },
+    {
+      "id": "O",
+      "coords": [
+        13,
+        11,
+        14
+      ]
+    }
+  ],
+  "tree": {
+    "id": "E",
+    "point": [
+      8,
+      1,
+      5
+    ],
+    "axis": 0,
+    "size": 15,
+    "bbox": {
+      "min": [
+        1,
+        1,
+        1
+      ],
+      "max": [
+        15,
+        15,
+        15
+      ]
+    },
+    "left": {
+      "id": "H",
+      "point": [
+        3,
+        5,
+        1
+      ],
+      "axis": 1,
+      "size": 7,
+      "bbox": {
+        "min": [
+          1,
+          2,
+          1
+        ],
+        "max": [
+          7,
+          9,
+          9
+        ]
+      },
+      "left": {
+        "id": "A",
+        "point": [
+          2,
+          3,
+          4
+        ],
+        "axis": 2,
+        "size": 3,
+        "bbox": {
+          "min": [
+            2,
+            2,
+            2
+          ],
+          "max": [
+            7,
+            4,
+            8
+          ]
+        },
+        "left": {
+          "id": "B",
+          "point": [
+            5,
+            4,
+            2
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              5,
+              4,
+              2
+            ],
+            "max": [
+              5,
+              4,
+              2
+            ]
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "id": "F",
+          "point": [
+            7,
+            2,
+            8
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              7,
+              2,
+              8
+            ],
+            "max": [
+              7,
+              2,
+              8
+            ]
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "id": "G",
+        "point": [
+          1,
+          8,
+          6
+        ],
+        "axis": 2,
+        "size": 3,
+        "bbox": {
+          "min": [
+            1,
+            7,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            9
+          ]
+        },
+        "left": {
+          "id": "I",
+          "point": [
+            6,
+            9,
+            3
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              6,
+              9,
+              3
+            ],
+            "max": [
+              6,
+              9,
+              3
+            ]
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "id": "D",
+          "point": [
+            4,
+            7,
+            9
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              4,
+              7,
+              9
+            ],
+            "max": [
+              4,
+              7,
+              9
+            ]
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    },
+    "right": {
+      "id": "L",
+      "point": [
+        14,
+        12,
+        10
+      ],
+      "axis": 1,
+      "size": 7,
+      "bbox": {
+        "min": [
+          9,
+          6,
+          7
+        ],
+        "max": [
+          15,
+          15,
+          15
+        ]
+      },
+      "left": {
+        "id": "O",
+        "point": [
+          13,
+          11,
+          14
+        ],
+        "axis": 2,
+        "size": 3,
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            13,
+            11,
+            15
+          ]
+        },
+        "left": {
+          "id": "C",
+          "point": [
+            9,
+            6,
+            7
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              9,
+              6,
+              7
+            ],
+            "max": [
+              9,
+              6,
+              7
+            ]
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "id": "K",
+          "point": [
+            12,
+            10,
+            15
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              12,
+              10,
+              15
+            ],
+            "max": [
+              12,
+              10,
+              15
+            ]
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      "right": {
+        "id": "J",
+        "point": [
+          10,
+          14,
+          12
+        ],
+        "axis": 2,
+        "size": 3,
+        "bbox": {
+          "min": [
+            10,
+            13,
+            11
+          ],
+          "max": [
+            15,
+            15,
+            13
+          ]
+        },
+        "left": {
+          "id": "N",
+          "point": [
+            15,
+            13,
+            11
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              15,
+              13,
+              11
+            ],
+            "max": [
+              15,
+              13,
+              11
+            ]
+          },
+          "left": null,
+          "right": null
+        },
+        "right": {
+          "id": "M",
+          "point": [
+            11,
+            15,
+            13
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              11,
+              15,
+              13
+            ],
+            "max": [
+              11,
+              15,
+              13
+            ]
+          },
+          "left": null,
+          "right": null
+        }
+      }
+    }
+  },
+  "buildEvents": [
+    {
+      "type": "build",
+      "nodeId": "E",
+      "point": [
+        8,
+        1,
+        5
+      ],
+      "depth": 0,
+      "axis": 0,
+      "size": 15,
+      "bbox": {
+        "min": [
+          1,
+          1,
+          1
+        ],
+        "max": [
+          15,
+          15,
+          15
+        ]
+      },
+      "leftChildId": "H",
+      "rightChildId": "L",
+      "leftIds": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "H",
+        "I"
+      ],
+      "rightIds": [
+        "C",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "H",
+      "point": [
+        3,
+        5,
+        1
+      ],
+      "depth": 1,
+      "axis": 1,
+      "size": 7,
+      "bbox": {
+        "min": [
+          1,
+          2,
+          1
+        ],
+        "max": [
+          7,
+          9,
+          9
+        ]
+      },
+      "leftChildId": "A",
+      "rightChildId": "G",
+      "leftIds": [
+        "A",
+        "B",
+        "F"
+      ],
+      "rightIds": [
+        "D",
+        "G",
+        "I"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "A",
+      "point": [
+        2,
+        3,
+        4
+      ],
+      "depth": 2,
+      "axis": 2,
+      "size": 3,
+      "bbox": {
+        "min": [
+          2,
+          2,
+          2
+        ],
+        "max": [
+          7,
+          4,
+          8
+        ]
+      },
+      "leftChildId": "B",
+      "rightChildId": "F",
+      "leftIds": [
+        "B"
+      ],
+      "rightIds": [
+        "F"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "B",
+      "point": [
+        5,
+        4,
+        2
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          5,
+          4,
+          2
+        ],
+        "max": [
+          5,
+          4,
+          2
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "F",
+      "point": [
+        7,
+        2,
+        8
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          7,
+          2,
+          8
+        ],
+        "max": [
+          7,
+          2,
+          8
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "G",
+      "point": [
+        1,
+        8,
+        6
+      ],
+      "depth": 2,
+      "axis": 2,
+      "size": 3,
+      "bbox": {
+        "min": [
+          1,
+          7,
+          3
+        ],
+        "max": [
+          6,
+          9,
+          9
+        ]
+      },
+      "leftChildId": "I",
+      "rightChildId": "D",
+      "leftIds": [
+        "I"
+      ],
+      "rightIds": [
+        "D"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "I",
+      "point": [
+        6,
+        9,
+        3
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          6,
+          9,
+          3
+        ],
+        "max": [
+          6,
+          9,
+          3
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "D",
+      "point": [
+        4,
+        7,
+        9
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          4,
+          7,
+          9
+        ],
+        "max": [
+          4,
+          7,
+          9
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "L",
+      "point": [
+        14,
+        12,
+        10
+      ],
+      "depth": 1,
+      "axis": 1,
+      "size": 7,
+      "bbox": {
+        "min": [
+          9,
+          6,
+          7
+        ],
+        "max": [
+          15,
+          15,
+          15
+        ]
+      },
+      "leftChildId": "O",
+      "rightChildId": "J",
+      "leftIds": [
+        "C",
+        "K",
+        "O"
+      ],
+      "rightIds": [
+        "J",
+        "M",
+        "N"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "O",
+      "point": [
+        13,
+        11,
+        14
+      ],
+      "depth": 2,
+      "axis": 2,
+      "size": 3,
+      "bbox": {
+        "min": [
+          9,
+          6,
+          7
+        ],
+        "max": [
+          13,
+          11,
+          15
+        ]
+      },
+      "leftChildId": "C",
+      "rightChildId": "K",
+      "leftIds": [
+        "C"
+      ],
+      "rightIds": [
+        "K"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "C",
+      "point": [
+        9,
+        6,
+        7
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          9,
+          6,
+          7
+        ],
+        "max": [
+          9,
+          6,
+          7
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "K",
+      "point": [
+        12,
+        10,
+        15
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          12,
+          10,
+          15
+        ],
+        "max": [
+          12,
+          10,
+          15
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "J",
+      "point": [
+        10,
+        14,
+        12
+      ],
+      "depth": 2,
+      "axis": 2,
+      "size": 3,
+      "bbox": {
+        "min": [
+          10,
+          13,
+          11
+        ],
+        "max": [
+          15,
+          15,
+          13
+        ]
+      },
+      "leftChildId": "N",
+      "rightChildId": "M",
+      "leftIds": [
+        "N"
+      ],
+      "rightIds": [
+        "M"
+      ]
+    },
+    {
+      "type": "build",
+      "nodeId": "N",
+      "point": [
+        15,
+        13,
+        11
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          15,
+          13,
+          11
+        ],
+        "max": [
+          15,
+          13,
+          11
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    },
+    {
+      "type": "build",
+      "nodeId": "M",
+      "point": [
+        11,
+        15,
+        13
+      ],
+      "depth": 3,
+      "axis": 0,
+      "size": 1,
+      "bbox": {
+        "min": [
+          11,
+          15,
+          13
+        ],
+        "max": [
+          11,
+          15,
+          13
+        ]
+      },
+      "leftChildId": null,
+      "rightChildId": null,
+      "leftIds": [],
+      "rightIds": []
+    }
+  ],
+  "range": {
+    "lower": [
+      3,
+      2,
+      1
+    ],
+    "upper": [
+      9,
+      7,
+      8
+    ],
+    "closed": true,
+    "result": [
+      "B",
+      "C",
+      "F",
+      "H"
+    ],
+    "count": 4,
+    "events": [
+      {
+        "type": "visit",
+        "nodeId": "E",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            1,
+            1,
+            1
+          ],
+          "max": [
+            15,
+            15,
+            15
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "H",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            1,
+            2,
+            1
+          ],
+          "max": [
+            7,
+            9,
+            9
+          ]
+        }
+      },
+      {
+        "type": "point_hit",
+        "nodeId": "H",
+        "hitId": "H",
+        "point": [
+          3,
+          5,
+          1
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "A",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            2,
+            2,
+            2
+          ],
+          "max": [
+            7,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "B",
+        "relation": "contained",
+        "bbox": {
+          "min": [
+            5,
+            4,
+            2
+          ],
+          "max": [
+            5,
+            4,
+            2
+          ]
+        }
+      },
+      {
+        "type": "accept_subtree",
+        "nodeId": "B",
+        "size": 1,
+        "bbox": {
+          "min": [
+            5,
+            4,
+            2
+          ],
+          "max": [
+            5,
+            4,
+            2
+          ]
+        },
+        "ids": [
+          "B"
+        ],
+        "subtreeIds": [
+          "B"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "F",
+        "relation": "contained",
+        "bbox": {
+          "min": [
+            7,
+            2,
+            8
+          ],
+          "max": [
+            7,
+            2,
+            8
+          ]
+        }
+      },
+      {
+        "type": "accept_subtree",
+        "nodeId": "F",
+        "size": 1,
+        "bbox": {
+          "min": [
+            7,
+            2,
+            8
+          ],
+          "max": [
+            7,
+            2,
+            8
+          ]
+        },
+        "ids": [
+          "F"
+        ],
+        "subtreeIds": [
+          "F"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "G",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            1,
+            7,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            9
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "I",
+        "relation": "disjoint",
+        "bbox": {
+          "min": [
+            6,
+            9,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            3
+          ]
+        }
+      },
+      {
+        "type": "prune_disjoint",
+        "nodeId": "I",
+        "size": 1,
+        "bbox": {
+          "min": [
+            6,
+            9,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            3
+          ]
+        },
+        "ids": [
+          "I"
+        ],
+        "subtreeIds": [
+          "I"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "D",
+        "relation": "disjoint",
+        "bbox": {
+          "min": [
+            4,
+            7,
+            9
+          ],
+          "max": [
+            4,
+            7,
+            9
+          ]
+        }
+      },
+      {
+        "type": "prune_disjoint",
+        "nodeId": "D",
+        "size": 1,
+        "bbox": {
+          "min": [
+            4,
+            7,
+            9
+          ],
+          "max": [
+            4,
+            7,
+            9
+          ]
+        },
+        "ids": [
+          "D"
+        ],
+        "subtreeIds": [
+          "D"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "L",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            15,
+            15,
+            15
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "O",
+        "relation": "partial",
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            13,
+            11,
+            15
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "C",
+        "relation": "contained",
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            9,
+            6,
+            7
+          ]
+        }
+      },
+      {
+        "type": "accept_subtree",
+        "nodeId": "C",
+        "size": 1,
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            9,
+            6,
+            7
+          ]
+        },
+        "ids": [
+          "C"
+        ],
+        "subtreeIds": [
+          "C"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "K",
+        "relation": "disjoint",
+        "bbox": {
+          "min": [
+            12,
+            10,
+            15
+          ],
+          "max": [
+            12,
+            10,
+            15
+          ]
+        }
+      },
+      {
+        "type": "prune_disjoint",
+        "nodeId": "K",
+        "size": 1,
+        "bbox": {
+          "min": [
+            12,
+            10,
+            15
+          ],
+          "max": [
+            12,
+            10,
+            15
+          ]
+        },
+        "ids": [
+          "K"
+        ],
+        "subtreeIds": [
+          "K"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "J",
+        "relation": "disjoint",
+        "bbox": {
+          "min": [
+            10,
+            13,
+            11
+          ],
+          "max": [
+            15,
+            15,
+            13
+          ]
+        }
+      },
+      {
+        "type": "prune_disjoint",
+        "nodeId": "J",
+        "size": 3,
+        "bbox": {
+          "min": [
+            10,
+            13,
+            11
+          ],
+          "max": [
+            15,
+            15,
+            13
+          ]
+        },
+        "ids": [
+          "J",
+          "M",
+          "N"
+        ],
+        "subtreeIds": [
+          "J",
+          "M",
+          "N"
+        ]
+      }
+    ]
+  },
+  "nearest": {
+    "query": [
+      6,
+      3,
+      3
+    ],
+    "result": "B",
+    "distanceSquared": 3,
+    "events": [
+      {
+        "type": "visit",
+        "nodeId": "E",
+        "lowerBoundSquared": 0,
+        "bestId": null,
+        "bestSquared": null,
+        "bbox": {
+          "min": [
+            1,
+            1,
+            1
+          ],
+          "max": [
+            15,
+            15,
+            15
+          ]
+        }
+      },
+      {
+        "type": "update_best",
+        "nodeId": "E",
+        "bestId": "E",
+        "bestSquared": 12
+      },
+      {
+        "type": "visit",
+        "nodeId": "H",
+        "lowerBoundSquared": 0,
+        "bestId": "E",
+        "bestSquared": 12,
+        "bbox": {
+          "min": [
+            1,
+            2,
+            1
+          ],
+          "max": [
+            7,
+            9,
+            9
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "A",
+        "lowerBoundSquared": 0,
+        "bestId": "E",
+        "bestSquared": 12,
+        "bbox": {
+          "min": [
+            2,
+            2,
+            2
+          ],
+          "max": [
+            7,
+            4,
+            8
+          ]
+        }
+      },
+      {
+        "type": "visit",
+        "nodeId": "B",
+        "lowerBoundSquared": 3,
+        "bestId": "E",
+        "bestSquared": 12,
+        "bbox": {
+          "min": [
+            5,
+            4,
+            2
+          ],
+          "max": [
+            5,
+            4,
+            2
+          ]
+        }
+      },
+      {
+        "type": "update_best",
+        "nodeId": "B",
+        "bestId": "B",
+        "bestSquared": 3
+      },
+      {
+        "type": "visit",
+        "nodeId": "F",
+        "lowerBoundSquared": 27,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            7,
+            2,
+            8
+          ],
+          "max": [
+            7,
+            2,
+            8
+          ]
+        }
+      },
+      {
+        "type": "prune_distance",
+        "nodeId": "F",
+        "lowerBoundSquared": 27,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            7,
+            2,
+            8
+          ],
+          "max": [
+            7,
+            2,
+            8
+          ]
+        },
+        "ids": [
+          "F"
+        ],
+        "subtreeIds": [
+          "F"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "G",
+        "lowerBoundSquared": 16,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            1,
+            7,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            9
+          ]
+        }
+      },
+      {
+        "type": "prune_distance",
+        "nodeId": "G",
+        "lowerBoundSquared": 16,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            1,
+            7,
+            3
+          ],
+          "max": [
+            6,
+            9,
+            9
+          ]
+        },
+        "ids": [
+          "D",
+          "G",
+          "I"
+        ],
+        "subtreeIds": [
+          "D",
+          "G",
+          "I"
+        ]
+      },
+      {
+        "type": "visit",
+        "nodeId": "L",
+        "lowerBoundSquared": 34,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            15,
+            15,
+            15
+          ]
+        }
+      },
+      {
+        "type": "prune_distance",
+        "nodeId": "L",
+        "lowerBoundSquared": 34,
+        "bestId": "B",
+        "bestSquared": 3,
+        "bbox": {
+          "min": [
+            9,
+            6,
+            7
+          ],
+          "max": [
+            15,
+            15,
+            15
+          ]
+        },
+        "ids": [
+          "C",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O"
+        ],
+        "subtreeIds": [
+          "C",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O"
+        ]
+      }
+    ]
+  },
+  "dynamic": {
+    "dimension": 3,
+    "alpha": 0.75,
+    "sequence": "p_t=(t,t,t), t=1..31",
+    "steps": [
+      {
+        "n": 1,
+        "heightPlain": 1,
+        "heightBalanced": 1,
+        "rebuilds": 0,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0038,
+        "balancedCumulativeMs": 0.0017,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              1,
+              1,
+              1
+            ]
+          },
+          "left": null,
+          "right": null
+        },
+        "balancedTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 1,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              1,
+              1,
+              1
+            ]
+          },
+          "left": null,
+          "right": null
+        }
+      },
+      {
+        "n": 2,
+        "heightPlain": 2,
+        "heightBalanced": 2,
+        "rebuilds": 0,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0106,
+        "balancedCumulativeMs": 0.0061,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 2,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              2,
+              2,
+              2
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 1,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": null,
+            "right": null
+          }
+        },
+        "balancedTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 2,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              2,
+              2,
+              2
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 1,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": null,
+            "right": null
+          }
+        }
+      },
+      {
+        "n": 3,
+        "heightPlain": 3,
+        "heightBalanced": 3,
+        "rebuilds": 0,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0152,
+        "balancedCumulativeMs": 0.0103,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 3,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              3,
+              3,
+              3
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                3,
+                3,
+                3
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 3,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              3,
+              3,
+              3
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                3,
+                3,
+                3
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          }
+        }
+      },
+      {
+        "n": 4,
+        "heightPlain": 4,
+        "heightBalanced": 4,
+        "rebuilds": 0,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0207,
+        "balancedCumulativeMs": 0.0155,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 4,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              4,
+              4,
+              4
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 3,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                4,
+                4,
+                4
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    4,
+                    4,
+                    4
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 4,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              4,
+              4,
+              4
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 3,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                4,
+                4,
+                4
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    4,
+                    4,
+                    4
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 5,
+        "heightPlain": 5,
+        "heightBalanced": 3,
+        "rebuilds": 1,
+        "rebuiltSize": 5,
+        "plainCumulativeMs": 0.0264,
+        "balancedCumulativeMs": 0.0346,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 5,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              5,
+              5,
+              5
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 4,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                5,
+                5,
+                5
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  5,
+                  5,
+                  5
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      5,
+                      5,
+                      5
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 5,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              5,
+              5,
+              5
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                5,
+                5,
+                5
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          }
+        }
+      },
+      {
+        "n": 6,
+        "heightPlain": 6,
+        "heightBalanced": 3,
+        "rebuilds": 1,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0331,
+        "balancedCumulativeMs": 0.0396,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 6,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              6,
+              6,
+              6
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 5,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 4,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    6,
+                    6,
+                    6
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      6,
+                      6,
+                      6
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        6,
+                        6,
+                        6
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 6,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              6,
+              6,
+              6
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 3,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          }
+        }
+      },
+      {
+        "n": 7,
+        "heightPlain": 7,
+        "heightBalanced": 4,
+        "rebuilds": 1,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0403,
+        "balancedCumulativeMs": 0.0464,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 7,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              7,
+              7,
+              7
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                7,
+                7,
+                7
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 5,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 3,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      7,
+                      7,
+                      7
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        7,
+                        7,
+                        7
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          7,
+                          7,
+                          7
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 7,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              7,
+              7,
+              7
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 4,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                7,
+                7,
+                7
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 8,
+        "heightPlain": 8,
+        "heightBalanced": 5,
+        "rebuilds": 1,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0485,
+        "balancedCumulativeMs": 0.0532,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 8,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              8,
+              8,
+              8
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 7,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                8,
+                8,
+                8
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  8,
+                  8,
+                  8
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 5,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 4,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      8,
+                      8,
+                      8
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 3,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 2,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          8,
+                          8,
+                          8
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 1,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            8,
+                            8,
+                            8
+                          ]
+                        },
+                        "left": null,
+                        "right": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 8,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              8,
+              8,
+              8
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 5,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                8,
+                8,
+                8
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  8,
+                  8,
+                  8
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T08",
+                  "point": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      8,
+                      8,
+                      8
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 9,
+        "heightPlain": 9,
+        "heightBalanced": 6,
+        "rebuilds": 1,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0579,
+        "balancedCumulativeMs": 0.0611,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 9,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              9,
+              9,
+              9
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 8,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                9,
+                9,
+                9
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  9,
+                  9,
+                  9
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 6,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    9,
+                    9,
+                    9
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 5,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 4,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        9,
+                        9,
+                        9
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 3,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          9,
+                          9,
+                          9
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 2,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            9,
+                            9,
+                            9
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 1,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              9,
+                              9,
+                              9
+                            ]
+                          },
+                          "left": null,
+                          "right": null
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 9,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              9,
+              9,
+              9
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                9,
+                9,
+                9
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 4,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  9,
+                  9,
+                  9
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "max": [
+                    9,
+                    9,
+                    9
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T08",
+                  "point": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T09",
+                    "point": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        9,
+                        9,
+                        9
+                      ],
+                      "max": [
+                        9,
+                        9,
+                        9
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 10,
+        "heightPlain": 10,
+        "heightBalanced": 5,
+        "rebuilds": 2,
+        "rebuiltSize": 5,
+        "plainCumulativeMs": 0.0687,
+        "balancedCumulativeMs": 0.0856,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 10,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              10,
+              10,
+              10
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 9,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                10,
+                10,
+                10
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 7,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 6,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      10,
+                      10,
+                      10
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 5,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        10,
+                        10,
+                        10
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 4,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          10,
+                          10,
+                          10
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 3,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            10,
+                            10,
+                            10
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 2,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              10,
+                              10,
+                              10
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 1,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                10,
+                                10,
+                                10
+                              ]
+                            },
+                            "left": null,
+                            "right": null
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 10,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              10,
+              10,
+              10
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 7,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                10,
+                10,
+                10
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T08",
+              "point": [
+                8,
+                8,
+                8
+              ],
+              "axis": 2,
+              "size": 5,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    6,
+                    6,
+                    6
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": {
+                  "id": "T06",
+                  "point": [
+                    6,
+                    6,
+                    6
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "max": [
+                      6,
+                      6,
+                      6
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 11,
+        "heightPlain": 11,
+        "heightBalanced": 5,
+        "rebuilds": 2,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.0799,
+        "balancedCumulativeMs": 0.0937,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 11,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              11,
+              11,
+              11
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 10,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                11,
+                11,
+                11
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 9,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  11,
+                  11,
+                  11
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 8,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 7,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 6,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        11,
+                        11,
+                        11
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 5,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          11,
+                          11,
+                          11
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 4,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            11,
+                            11,
+                            11
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 3,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              11,
+                              11,
+                              11
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 2,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                11,
+                                11,
+                                11
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 1,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  11,
+                                  11,
+                                  11
+                                ]
+                              },
+                              "left": null,
+                              "right": null
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 11,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              11,
+              11,
+              11
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T05",
+            "point": [
+              5,
+              5,
+              5
+            ],
+            "axis": 1,
+            "size": 8,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                11,
+                11,
+                11
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  4,
+                  4,
+                  4
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T08",
+              "point": [
+                8,
+                8,
+                8
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  6,
+                  6,
+                  6
+                ],
+                "max": [
+                  11,
+                  11,
+                  11
+                ]
+              },
+              "left": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    6,
+                    6,
+                    6
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": {
+                  "id": "T06",
+                  "point": [
+                    6,
+                    6,
+                    6
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "max": [
+                      6,
+                      6,
+                      6
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 12,
+        "heightPlain": 12,
+        "heightBalanced": 5,
+        "rebuilds": 3,
+        "rebuiltSize": 9,
+        "plainCumulativeMs": 0.0915,
+        "balancedCumulativeMs": 0.1248,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 12,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              12,
+              12,
+              12
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 11,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                12,
+                12,
+                12
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 10,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  12,
+                  12,
+                  12
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 9,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 8,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      12,
+                      12,
+                      12
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 7,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        12,
+                        12,
+                        12
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 6,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          12,
+                          12,
+                          12
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 5,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            12,
+                            12,
+                            12
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 4,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              12,
+                              12,
+                              12
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 3,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                12,
+                                12,
+                                12
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 2,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  12,
+                                  12,
+                                  12
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 1,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    12,
+                                    12,
+                                    12
+                                  ]
+                                },
+                                "left": null,
+                                "right": null
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 0,
+          "size": 12,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              12,
+              12,
+              12
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 2,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                2,
+                2,
+                2
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 2,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          },
+          "right": {
+            "id": "T08",
+            "point": [
+              8,
+              8,
+              8
+            ],
+            "axis": 1,
+            "size": 9,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                12,
+                12,
+                12
+              ]
+            },
+            "left": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 4,
+              "bbox": {
+                "min": [
+                  4,
+                  4,
+                  4
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": {
+                  "id": "T04",
+                  "point": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      4,
+                      4,
+                      4
+                    ],
+                    "max": [
+                      4,
+                      4,
+                      4
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              },
+              "right": {
+                "id": "T07",
+                "point": [
+                  7,
+                  7,
+                  7
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T11",
+              "point": [
+                11,
+                11,
+                11
+              ],
+              "axis": 2,
+              "size": 4,
+              "bbox": {
+                "min": [
+                  9,
+                  9,
+                  9
+                ],
+                "max": [
+                  12,
+                  12,
+                  12
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              },
+              "right": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 13,
+        "heightPlain": 13,
+        "heightBalanced": 4,
+        "rebuilds": 4,
+        "rebuiltSize": 13,
+        "plainCumulativeMs": 0.1051,
+        "balancedCumulativeMs": 0.161,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 13,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              13,
+              13,
+              13
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 12,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                13,
+                13,
+                13
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 11,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  13,
+                  13,
+                  13
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 10,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    13,
+                    13,
+                    13
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 9,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 8,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        13,
+                        13,
+                        13
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 7,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          13,
+                          13,
+                          13
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 6,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            13,
+                            13,
+                            13
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 5,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              13,
+                              13,
+                              13
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 4,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                13,
+                                13,
+                                13
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 3,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  13,
+                                  13,
+                                  13
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 2,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    13,
+                                    13,
+                                    13
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 1,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      13,
+                                      13,
+                                      13
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": null
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 13,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              13,
+              13,
+              13
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                13,
+                13,
+                13
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  13,
+                  13,
+                  13
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          }
+        }
+      },
+      {
+        "n": 14,
+        "heightPlain": 14,
+        "heightBalanced": 4,
+        "rebuilds": 4,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.1193,
+        "balancedCumulativeMs": 0.1676,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 14,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              14,
+              14,
+              14
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 13,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 12,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  14,
+                  14,
+                  14
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 11,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    14,
+                    14,
+                    14
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 10,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      14,
+                      14,
+                      14
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 9,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        14,
+                        14,
+                        14
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 8,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          14,
+                          14,
+                          14
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 7,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            14,
+                            14,
+                            14
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 6,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              14,
+                              14,
+                              14
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 5,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                14,
+                                14,
+                                14
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 4,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  14,
+                                  14,
+                                  14
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 3,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    14,
+                                    14,
+                                    14
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 2,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      14,
+                                      14,
+                                      14
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 1,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        14,
+                                        14,
+                                        14
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": null
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 14,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              14,
+              14,
+              14
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 7,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  14,
+                  14,
+                  14
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    14,
+                    14,
+                    14
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 15,
+        "heightPlain": 15,
+        "heightBalanced": 5,
+        "rebuilds": 4,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.1341,
+        "balancedCumulativeMs": 0.1752,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 15,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              15,
+              15,
+              15
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                15,
+                15,
+                15
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 13,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 12,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 11,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 10,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        15,
+                        15,
+                        15
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 9,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          15,
+                          15,
+                          15
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 8,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            15,
+                            15,
+                            15
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 7,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              15,
+                              15,
+                              15
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 6,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                15,
+                                15,
+                                15
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 5,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  15,
+                                  15,
+                                  15
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 4,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    15,
+                                    15,
+                                    15
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 3,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      15,
+                                      15,
+                                      15
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 2,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        15,
+                                        15,
+                                        15
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 1,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          15,
+                                          15,
+                                          15
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": null
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 15,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              15,
+              15,
+              15
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 8,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                15,
+                15,
+                15
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 4,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 16,
+        "heightPlain": 16,
+        "heightBalanced": 6,
+        "rebuilds": 4,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.1517,
+        "balancedCumulativeMs": 0.1837,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 16,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              16,
+              16,
+              16
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 15,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                16,
+                16,
+                16
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 14,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  16,
+                  16,
+                  16
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 13,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    16,
+                    16,
+                    16
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 12,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      16,
+                      16,
+                      16
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 11,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        16,
+                        16,
+                        16
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 10,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          16,
+                          16,
+                          16
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 9,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            16,
+                            16,
+                            16
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 8,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              16,
+                              16,
+                              16
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 7,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                16,
+                                16,
+                                16
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 6,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  16,
+                                  16,
+                                  16
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 5,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    16,
+                                    16,
+                                    16
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 4,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      16,
+                                      16,
+                                      16
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 3,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        16,
+                                        16,
+                                        16
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 2,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          16,
+                                          16,
+                                          16
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 1,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            16,
+                                            16,
+                                            16
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": null
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 16,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              16,
+              16,
+              16
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 9,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                16,
+                16,
+                16
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 5,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  16,
+                  16,
+                  16
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    16,
+                    16,
+                    16
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      16,
+                      16,
+                      16
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T16",
+                    "point": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        16,
+                        16,
+                        16
+                      ],
+                      "max": [
+                        16,
+                        16,
+                        16
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 17,
+        "heightPlain": 17,
+        "heightBalanced": 7,
+        "rebuilds": 4,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.1706,
+        "balancedCumulativeMs": 0.1933,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 17,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              17,
+              17,
+              17
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 16,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                17,
+                17,
+                17
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 15,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  17,
+                  17,
+                  17
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 14,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    17,
+                    17,
+                    17
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 13,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      17,
+                      17,
+                      17
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 12,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 11,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          17,
+                          17,
+                          17
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 10,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            17,
+                            17,
+                            17
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 9,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              17,
+                              17,
+                              17
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 8,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                17,
+                                17,
+                                17
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 7,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  17,
+                                  17,
+                                  17
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 6,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    17,
+                                    17,
+                                    17
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 5,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      17,
+                                      17,
+                                      17
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 4,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        17,
+                                        17,
+                                        17
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 3,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          17,
+                                          17,
+                                          17
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 2,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            17,
+                                            17,
+                                            17
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 1,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              17,
+                                              17,
+                                              17
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": null
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 17,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              17,
+              17,
+              17
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 10,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                17,
+                17,
+                17
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  17,
+                  17,
+                  17
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    17,
+                    17,
+                    17
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 3,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      17,
+                      17,
+                      17
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T16",
+                    "point": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        16,
+                        16,
+                        16
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T17",
+                      "point": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          17,
+                          17,
+                          17
+                        ],
+                        "max": [
+                          17,
+                          17,
+                          17
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 18,
+        "heightPlain": 18,
+        "heightBalanced": 6,
+        "rebuilds": 5,
+        "rebuiltSize": 5,
+        "plainCumulativeMs": 0.1877,
+        "balancedCumulativeMs": 0.2204,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 18,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              18,
+              18,
+              18
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 17,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                18,
+                18,
+                18
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 16,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  18,
+                  18,
+                  18
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 15,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    18,
+                    18,
+                    18
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 14,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 13,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        18,
+                        18,
+                        18
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 12,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          18,
+                          18,
+                          18
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 11,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            18,
+                            18,
+                            18
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 10,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              18,
+                              18,
+                              18
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 9,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                18,
+                                18,
+                                18
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 8,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  18,
+                                  18,
+                                  18
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 7,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    18,
+                                    18,
+                                    18
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 6,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      18,
+                                      18,
+                                      18
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 5,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        18,
+                                        18,
+                                        18
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 4,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          18,
+                                          18,
+                                          18
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 3,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            18,
+                                            18,
+                                            18
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 2,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              18,
+                                              18,
+                                              18
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 1,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                18,
+                                                18,
+                                                18
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": null
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 18,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              18,
+              18,
+              18
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 11,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                18,
+                18,
+                18
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  18,
+                  18,
+                  18
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T16",
+                "point": [
+                  16,
+                  16,
+                  16
+                ],
+                "axis": 0,
+                "size": 5,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    18,
+                    18,
+                    18
+                  ]
+                },
+                "left": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      14,
+                      14,
+                      14
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": {
+                    "id": "T14",
+                    "point": [
+                      14,
+                      14,
+                      14
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        14,
+                        14,
+                        14
+                      ],
+                      "max": [
+                        14,
+                        14,
+                        14
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 19,
+        "heightPlain": 19,
+        "heightBalanced": 6,
+        "rebuilds": 5,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.2069,
+        "balancedCumulativeMs": 0.2304,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 19,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              19,
+              19,
+              19
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 18,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                19,
+                19,
+                19
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 17,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  19,
+                  19,
+                  19
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 16,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    19,
+                    19,
+                    19
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 15,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      19,
+                      19,
+                      19
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 14,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        19,
+                        19,
+                        19
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 13,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          19,
+                          19,
+                          19
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 12,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            19,
+                            19,
+                            19
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 11,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              19,
+                              19,
+                              19
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 10,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                19,
+                                19,
+                                19
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 9,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  19,
+                                  19,
+                                  19
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 8,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    19,
+                                    19,
+                                    19
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 7,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      19,
+                                      19,
+                                      19
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 6,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        19,
+                                        19,
+                                        19
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 5,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          19,
+                                          19,
+                                          19
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 4,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            19,
+                                            19,
+                                            19
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 3,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              19,
+                                              19,
+                                              19
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 2,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                19,
+                                                19,
+                                                19
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 1,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": null
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 19,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              19,
+              19,
+              19
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 12,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                19,
+                19,
+                19
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  19,
+                  19,
+                  19
+                ]
+              },
+              "left": {
+                "id": "T12",
+                "point": [
+                  12,
+                  12,
+                  12
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    12,
+                    12,
+                    12
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T16",
+                "point": [
+                  16,
+                  16,
+                  16
+                ],
+                "axis": 0,
+                "size": 6,
+                "bbox": {
+                  "min": [
+                    14,
+                    14,
+                    14
+                  ],
+                  "max": [
+                    19,
+                    19,
+                    19
+                  ]
+                },
+                "left": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      14,
+                      14,
+                      14
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": {
+                    "id": "T14",
+                    "point": [
+                      14,
+                      14,
+                      14
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        14,
+                        14,
+                        14
+                      ],
+                      "max": [
+                        14,
+                        14,
+                        14
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 3,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      19,
+                      19,
+                      19
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": {
+                    "id": "T19",
+                    "point": [
+                      19,
+                      19,
+                      19
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        19,
+                        19,
+                        19
+                      ],
+                      "max": [
+                        19,
+                        19,
+                        19
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 20,
+        "heightPlain": 20,
+        "heightBalanced": 6,
+        "rebuilds": 6,
+        "rebuiltSize": 9,
+        "plainCumulativeMs": 0.2261,
+        "balancedCumulativeMs": 0.2645,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 20,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              20,
+              20,
+              20
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 19,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                20,
+                20,
+                20
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 18,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 17,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 16,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 15,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        20,
+                        20,
+                        20
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 14,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          20,
+                          20,
+                          20
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 13,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            20,
+                            20,
+                            20
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 12,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              20,
+                              20,
+                              20
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 11,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                20,
+                                20,
+                                20
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 10,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  20,
+                                  20,
+                                  20
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 9,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    20,
+                                    20,
+                                    20
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 8,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      20,
+                                      20,
+                                      20
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 7,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        20,
+                                        20,
+                                        20
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 6,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          20,
+                                          20,
+                                          20
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 5,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            20,
+                                            20,
+                                            20
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 4,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              20,
+                                              20,
+                                              20
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 3,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                20,
+                                                20,
+                                                20
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 2,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 1,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": null
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 20,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              20,
+              20,
+              20
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 13,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                20,
+                20,
+                20
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T16",
+              "point": [
+                16,
+                16,
+                16
+              ],
+              "axis": 2,
+              "size": 9,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "left": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": {
+                    "id": "T12",
+                    "point": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        12,
+                        12,
+                        12
+                      ],
+                      "max": [
+                        12,
+                        12,
+                        12
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 21,
+        "heightPlain": 21,
+        "heightBalanced": 6,
+        "rebuilds": 6,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.2463,
+        "balancedCumulativeMs": 0.2736,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 21,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              21,
+              21,
+              21
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 20,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                21,
+                21,
+                21
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 19,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  21,
+                  21,
+                  21
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 18,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    21,
+                    21,
+                    21
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 17,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      21,
+                      21,
+                      21
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 16,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        21,
+                        21,
+                        21
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 15,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          21,
+                          21,
+                          21
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 14,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            21,
+                            21,
+                            21
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 13,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              21,
+                              21,
+                              21
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 12,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                21,
+                                21,
+                                21
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 11,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  21,
+                                  21,
+                                  21
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 10,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    21,
+                                    21,
+                                    21
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 9,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      21,
+                                      21,
+                                      21
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 8,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        21,
+                                        21,
+                                        21
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 7,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          21,
+                                          21,
+                                          21
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 6,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            21,
+                                            21,
+                                            21
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 5,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              21,
+                                              21,
+                                              21
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 4,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                21,
+                                                21,
+                                                21
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 3,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  21,
+                                                  21,
+                                                  21
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 2,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 1,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": null
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 21,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              21,
+              21,
+              21
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                21,
+                21,
+                21
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T16",
+              "point": [
+                16,
+                16,
+                16
+              ],
+              "axis": 2,
+              "size": 10,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  21,
+                  21,
+                  21
+                ]
+              },
+              "left": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": {
+                    "id": "T12",
+                    "point": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        12,
+                        12,
+                        12
+                      ],
+                      "max": [
+                        12,
+                        12,
+                        12
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 5,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    21,
+                    21,
+                    21
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      21,
+                      21,
+                      21
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T21",
+                    "point": [
+                      21,
+                      21,
+                      21
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        21,
+                        21,
+                        21
+                      ],
+                      "max": [
+                        21,
+                        21,
+                        21
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 22,
+        "heightPlain": 22,
+        "heightBalanced": 7,
+        "rebuilds": 6,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.2671,
+        "balancedCumulativeMs": 0.2837,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 22,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              22,
+              22,
+              22
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 21,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                22,
+                22,
+                22
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 20,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 19,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    22,
+                    22,
+                    22
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 18,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 17,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        22,
+                        22,
+                        22
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 16,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          22,
+                          22,
+                          22
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 15,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            22,
+                            22,
+                            22
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 14,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              22,
+                              22,
+                              22
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 13,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                22,
+                                22,
+                                22
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 12,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  22,
+                                  22,
+                                  22
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 11,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    22,
+                                    22,
+                                    22
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 10,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      22,
+                                      22,
+                                      22
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 9,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        22,
+                                        22,
+                                        22
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 8,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          22,
+                                          22,
+                                          22
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 7,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            22,
+                                            22,
+                                            22
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 6,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              22,
+                                              22,
+                                              22
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 5,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                22,
+                                                22,
+                                                22
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 4,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  22,
+                                                  22,
+                                                  22
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 3,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    22,
+                                                    22,
+                                                    22
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 2,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 1,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": null
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 22,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              22,
+              22,
+              22
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 15,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                22,
+                22,
+                22
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T16",
+              "point": [
+                16,
+                16,
+                16
+              ],
+              "axis": 2,
+              "size": 11,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": {
+                    "id": "T12",
+                    "point": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        12,
+                        12,
+                        12
+                      ],
+                      "max": [
+                        12,
+                        12,
+                        12
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 6,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    22,
+                    22,
+                    22
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 3,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T21",
+                    "point": [
+                      21,
+                      21,
+                      21
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        21,
+                        21,
+                        21
+                      ],
+                      "max": [
+                        22,
+                        22,
+                        22
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T22",
+                      "point": [
+                        22,
+                        22,
+                        22
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          22,
+                          22,
+                          22
+                        ],
+                        "max": [
+                          22,
+                          22,
+                          22
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 23,
+        "heightPlain": 23,
+        "heightBalanced": 8,
+        "rebuilds": 6,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.2886,
+        "balancedCumulativeMs": 0.295,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 23,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              23,
+              23,
+              23
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 22,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                23,
+                23,
+                23
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 21,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  23,
+                  23,
+                  23
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 20,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    23,
+                    23,
+                    23
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 19,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      23,
+                      23,
+                      23
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 18,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        23,
+                        23,
+                        23
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 17,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          23,
+                          23,
+                          23
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 16,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            23,
+                            23,
+                            23
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 15,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              23,
+                              23,
+                              23
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 14,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                23,
+                                23,
+                                23
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 13,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  23,
+                                  23,
+                                  23
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 12,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    23,
+                                    23,
+                                    23
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 11,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      23,
+                                      23,
+                                      23
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 10,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        23,
+                                        23,
+                                        23
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 9,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          23,
+                                          23,
+                                          23
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 8,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            23,
+                                            23,
+                                            23
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 7,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              23,
+                                              23,
+                                              23
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 6,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                23,
+                                                23,
+                                                23
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 5,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  23,
+                                                  23,
+                                                  23
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 4,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    23,
+                                                    23,
+                                                    23
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 3,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      23,
+                                                      23,
+                                                      23
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 2,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 1,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": null
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 23,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              23,
+              23,
+              23
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T11",
+            "point": [
+              11,
+              11,
+              11
+            ],
+            "axis": 1,
+            "size": 16,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                23,
+                23,
+                23
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  10,
+                  10,
+                  10
+                ]
+              },
+              "left": {
+                "id": "T08",
+                "point": [
+                  8,
+                  8,
+                  8
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    8,
+                    8,
+                    8
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    10,
+                    10,
+                    10
+                  ],
+                  "max": [
+                    10,
+                    10,
+                    10
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T16",
+              "point": [
+                16,
+                16,
+                16
+              ],
+              "axis": 2,
+              "size": 12,
+              "bbox": {
+                "min": [
+                  12,
+                  12,
+                  12
+                ],
+                "max": [
+                  23,
+                  23,
+                  23
+                ]
+              },
+              "left": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    12,
+                    12,
+                    12
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": {
+                    "id": "T12",
+                    "point": [
+                      12,
+                      12,
+                      12
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        12,
+                        12,
+                        12
+                      ],
+                      "max": [
+                        12,
+                        12,
+                        12
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 7,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    23,
+                    23,
+                    23
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 4,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      23,
+                      23,
+                      23
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T21",
+                    "point": [
+                      21,
+                      21,
+                      21
+                    ],
+                    "axis": 2,
+                    "size": 3,
+                    "bbox": {
+                      "min": [
+                        21,
+                        21,
+                        21
+                      ],
+                      "max": [
+                        23,
+                        23,
+                        23
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T22",
+                      "point": [
+                        22,
+                        22,
+                        22
+                      ],
+                      "axis": 0,
+                      "size": 2,
+                      "bbox": {
+                        "min": [
+                          22,
+                          22,
+                          22
+                        ],
+                        "max": [
+                          23,
+                          23,
+                          23
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T23",
+                        "point": [
+                          23,
+                          23,
+                          23
+                        ],
+                        "axis": 1,
+                        "size": 1,
+                        "bbox": {
+                          "min": [
+                            23,
+                            23,
+                            23
+                          ],
+                          "max": [
+                            23,
+                            23,
+                            23
+                          ]
+                        },
+                        "left": null,
+                        "right": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 24,
+        "heightPlain": 24,
+        "heightBalanced": 6,
+        "rebuilds": 7,
+        "rebuiltSize": 17,
+        "plainCumulativeMs": 0.3111,
+        "balancedCumulativeMs": 0.3497,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 24,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              24,
+              24,
+              24
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 23,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                24,
+                24,
+                24
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 22,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  24,
+                  24,
+                  24
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 21,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    24,
+                    24,
+                    24
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 20,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      24,
+                      24,
+                      24
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 19,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        24,
+                        24,
+                        24
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 18,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          24,
+                          24,
+                          24
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 17,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            24,
+                            24,
+                            24
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 16,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              24,
+                              24,
+                              24
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 15,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                24,
+                                24,
+                                24
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 14,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  24,
+                                  24,
+                                  24
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 13,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    24,
+                                    24,
+                                    24
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 12,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      24,
+                                      24,
+                                      24
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 11,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        24,
+                                        24,
+                                        24
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 10,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          24,
+                                          24,
+                                          24
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 9,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            24,
+                                            24,
+                                            24
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 8,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              24,
+                                              24,
+                                              24
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 7,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                24,
+                                                24,
+                                                24
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 6,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  24,
+                                                  24,
+                                                  24
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 5,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    24,
+                                                    24,
+                                                    24
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 4,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      24,
+                                                      24,
+                                                      24
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 3,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        24,
+                                                        24,
+                                                        24
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 2,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 1,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": null
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 24,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              24,
+              24,
+              24
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T16",
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "axis": 1,
+            "size": 17,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                24,
+                24,
+                24
+              ]
+            },
+            "left": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T21",
+              "point": [
+                21,
+                21,
+                21
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  17,
+                  17,
+                  17
+                ],
+                "max": [
+                  24,
+                  24,
+                  24
+                ]
+              },
+              "left": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T23",
+                "point": [
+                  23,
+                  23,
+                  23
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "max": [
+                    24,
+                    24,
+                    24
+                  ]
+                },
+                "left": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      24,
+                      24,
+                      24
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 25,
+        "heightPlain": 25,
+        "heightBalanced": 6,
+        "rebuilds": 7,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.3346,
+        "balancedCumulativeMs": 0.3603,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 25,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              25,
+              25,
+              25
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 24,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                25,
+                25,
+                25
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 23,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  25,
+                  25,
+                  25
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 22,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    25,
+                    25,
+                    25
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 21,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      25,
+                      25,
+                      25
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 20,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        25,
+                        25,
+                        25
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 19,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          25,
+                          25,
+                          25
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 18,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            25,
+                            25,
+                            25
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 17,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              25,
+                              25,
+                              25
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 16,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                25,
+                                25,
+                                25
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 15,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  25,
+                                  25,
+                                  25
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 14,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    25,
+                                    25,
+                                    25
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 13,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      25,
+                                      25,
+                                      25
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 12,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        25,
+                                        25,
+                                        25
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 11,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          25,
+                                          25,
+                                          25
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 10,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            25,
+                                            25,
+                                            25
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 9,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              25,
+                                              25,
+                                              25
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 8,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                25,
+                                                25,
+                                                25
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 7,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  25,
+                                                  25,
+                                                  25
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 6,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    25,
+                                                    25,
+                                                    25
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 5,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      25,
+                                                      25,
+                                                      25
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 4,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        25,
+                                                        25,
+                                                        25
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 3,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          25,
+                                                          25,
+                                                          25
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 2,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 1,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": null
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 25,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              25,
+              25,
+              25
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T16",
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "axis": 1,
+            "size": 18,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                25,
+                25,
+                25
+              ]
+            },
+            "left": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T21",
+              "point": [
+                21,
+                21,
+                21
+              ],
+              "axis": 2,
+              "size": 9,
+              "bbox": {
+                "min": [
+                  17,
+                  17,
+                  17
+                ],
+                "max": [
+                  25,
+                  25,
+                  25
+                ]
+              },
+              "left": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T23",
+                "point": [
+                  23,
+                  23,
+                  23
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "max": [
+                    25,
+                    25,
+                    25
+                  ]
+                },
+                "left": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      25,
+                      25,
+                      25
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T25",
+                    "point": [
+                      25,
+                      25,
+                      25
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        25,
+                        25,
+                        25
+                      ],
+                      "max": [
+                        25,
+                        25,
+                        25
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 26,
+        "heightPlain": 26,
+        "heightBalanced": 7,
+        "rebuilds": 7,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.3592,
+        "balancedCumulativeMs": 0.3721,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 26,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              26,
+              26,
+              26
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 25,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                26,
+                26,
+                26
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 24,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  26,
+                  26,
+                  26
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 23,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    26,
+                    26,
+                    26
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 22,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      26,
+                      26,
+                      26
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 21,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        26,
+                        26,
+                        26
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 20,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          26,
+                          26,
+                          26
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 19,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            26,
+                            26,
+                            26
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 18,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              26,
+                              26,
+                              26
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 17,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                26,
+                                26,
+                                26
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 16,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  26,
+                                  26,
+                                  26
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 15,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    26,
+                                    26,
+                                    26
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 14,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      26,
+                                      26,
+                                      26
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 13,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        26,
+                                        26,
+                                        26
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 12,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          26,
+                                          26,
+                                          26
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 11,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            26,
+                                            26,
+                                            26
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 10,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              26,
+                                              26,
+                                              26
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 9,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                26,
+                                                26,
+                                                26
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 8,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  26,
+                                                  26,
+                                                  26
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 7,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    26,
+                                                    26,
+                                                    26
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 6,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      26,
+                                                      26,
+                                                      26
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 5,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        26,
+                                                        26,
+                                                        26
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 4,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          26,
+                                                          26,
+                                                          26
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 3,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            26,
+                                                            26,
+                                                            26
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 2,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 1,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": null
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 26,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              26,
+              26,
+              26
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T16",
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "axis": 1,
+            "size": 19,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                26,
+                26,
+                26
+              ]
+            },
+            "left": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T21",
+              "point": [
+                21,
+                21,
+                21
+              ],
+              "axis": 2,
+              "size": 10,
+              "bbox": {
+                "min": [
+                  17,
+                  17,
+                  17
+                ],
+                "max": [
+                  26,
+                  26,
+                  26
+                ]
+              },
+              "left": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T23",
+                "point": [
+                  23,
+                  23,
+                  23
+                ],
+                "axis": 0,
+                "size": 5,
+                "bbox": {
+                  "min": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "max": [
+                    26,
+                    26,
+                    26
+                  ]
+                },
+                "left": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 3,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      26,
+                      26,
+                      26
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T25",
+                    "point": [
+                      25,
+                      25,
+                      25
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        25,
+                        25,
+                        25
+                      ],
+                      "max": [
+                        26,
+                        26,
+                        26
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T26",
+                      "point": [
+                        26,
+                        26,
+                        26
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          26,
+                          26,
+                          26
+                        ],
+                        "max": [
+                          26,
+                          26,
+                          26
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 27,
+        "heightPlain": 27,
+        "heightBalanced": 8,
+        "rebuilds": 7,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.3846,
+        "balancedCumulativeMs": 0.3834,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 27,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              27,
+              27,
+              27
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 26,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                27,
+                27,
+                27
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 25,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  27,
+                  27,
+                  27
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 24,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    27,
+                    27,
+                    27
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 23,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      27,
+                      27,
+                      27
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 22,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        27,
+                        27,
+                        27
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 21,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          27,
+                          27,
+                          27
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 20,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            27,
+                            27,
+                            27
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 19,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              27,
+                              27,
+                              27
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 18,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                27,
+                                27,
+                                27
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 17,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  27,
+                                  27,
+                                  27
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 16,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    27,
+                                    27,
+                                    27
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 15,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      27,
+                                      27,
+                                      27
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 14,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        27,
+                                        27,
+                                        27
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 13,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          27,
+                                          27,
+                                          27
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 12,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            27,
+                                            27,
+                                            27
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 11,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              27,
+                                              27,
+                                              27
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 10,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                27,
+                                                27,
+                                                27
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 9,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  27,
+                                                  27,
+                                                  27
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 8,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    27,
+                                                    27,
+                                                    27
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 7,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      27,
+                                                      27,
+                                                      27
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 6,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        27,
+                                                        27,
+                                                        27
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 5,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          27,
+                                                          27,
+                                                          27
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 4,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            27,
+                                                            27,
+                                                            27
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 3,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              27,
+                                                              27,
+                                                              27
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 2,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T27",
+                                                              "point": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ],
+                                                              "axis": 2,
+                                                              "size": 1,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ],
+                                                                "max": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": null
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 27,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              27,
+              27,
+              27
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T16",
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "axis": 1,
+            "size": 20,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                27,
+                27,
+                27
+              ]
+            },
+            "left": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T21",
+              "point": [
+                21,
+                21,
+                21
+              ],
+              "axis": 2,
+              "size": 11,
+              "bbox": {
+                "min": [
+                  17,
+                  17,
+                  17
+                ],
+                "max": [
+                  27,
+                  27,
+                  27
+                ]
+              },
+              "left": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T23",
+                "point": [
+                  23,
+                  23,
+                  23
+                ],
+                "axis": 0,
+                "size": 6,
+                "bbox": {
+                  "min": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "max": [
+                    27,
+                    27,
+                    27
+                  ]
+                },
+                "left": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 4,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      27,
+                      27,
+                      27
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T25",
+                    "point": [
+                      25,
+                      25,
+                      25
+                    ],
+                    "axis": 2,
+                    "size": 3,
+                    "bbox": {
+                      "min": [
+                        25,
+                        25,
+                        25
+                      ],
+                      "max": [
+                        27,
+                        27,
+                        27
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T26",
+                      "point": [
+                        26,
+                        26,
+                        26
+                      ],
+                      "axis": 0,
+                      "size": 2,
+                      "bbox": {
+                        "min": [
+                          26,
+                          26,
+                          26
+                        ],
+                        "max": [
+                          27,
+                          27,
+                          27
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T27",
+                        "point": [
+                          27,
+                          27,
+                          27
+                        ],
+                        "axis": 1,
+                        "size": 1,
+                        "bbox": {
+                          "min": [
+                            27,
+                            27,
+                            27
+                          ],
+                          "max": [
+                            27,
+                            27,
+                            27
+                          ]
+                        },
+                        "left": null,
+                        "right": null
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 28,
+        "heightPlain": 28,
+        "heightBalanced": 7,
+        "rebuilds": 8,
+        "rebuiltSize": 5,
+        "plainCumulativeMs": 0.4104,
+        "balancedCumulativeMs": 0.4121,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 28,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              28,
+              28,
+              28
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 27,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                28,
+                28,
+                28
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 26,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  28,
+                  28,
+                  28
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 25,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    28,
+                    28,
+                    28
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 24,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      28,
+                      28,
+                      28
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 23,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        28,
+                        28,
+                        28
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 22,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          28,
+                          28,
+                          28
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 21,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            28,
+                            28,
+                            28
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 20,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              28,
+                              28,
+                              28
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 19,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                28,
+                                28,
+                                28
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 18,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  28,
+                                  28,
+                                  28
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 17,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    28,
+                                    28,
+                                    28
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 16,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      28,
+                                      28,
+                                      28
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 15,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        28,
+                                        28,
+                                        28
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 14,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          28,
+                                          28,
+                                          28
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 13,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            28,
+                                            28,
+                                            28
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 12,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              28,
+                                              28,
+                                              28
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 11,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                28,
+                                                28,
+                                                28
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 10,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  28,
+                                                  28,
+                                                  28
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 9,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    28,
+                                                    28,
+                                                    28
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 8,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      28,
+                                                      28,
+                                                      28
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 7,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        28,
+                                                        28,
+                                                        28
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 6,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          28,
+                                                          28,
+                                                          28
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 5,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            28,
+                                                            28,
+                                                            28
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 4,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              28,
+                                                              28,
+                                                              28
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 3,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                28,
+                                                                28,
+                                                                28
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T27",
+                                                              "point": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ],
+                                                              "axis": 2,
+                                                              "size": 2,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ],
+                                                                "max": [
+                                                                  28,
+                                                                  28,
+                                                                  28
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": {
+                                                                "id": "T28",
+                                                                "point": [
+                                                                  28,
+                                                                  28,
+                                                                  28
+                                                                ],
+                                                                "axis": 0,
+                                                                "size": 1,
+                                                                "bbox": {
+                                                                  "min": [
+                                                                    28,
+                                                                    28,
+                                                                    28
+                                                                  ],
+                                                                  "max": [
+                                                                    28,
+                                                                    28,
+                                                                    28
+                                                                  ]
+                                                                },
+                                                                "left": null,
+                                                                "right": null
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T07",
+          "point": [
+            7,
+            7,
+            7
+          ],
+          "axis": 0,
+          "size": 28,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              28,
+              28,
+              28
+            ]
+          },
+          "left": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 1,
+            "size": 6,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                6,
+                6,
+                6
+              ]
+            },
+            "left": {
+              "id": "T02",
+              "point": [
+                2,
+                2,
+                2
+              ],
+              "axis": 2,
+              "size": 3,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": {
+                "id": "T01",
+                "point": [
+                  1,
+                  1,
+                  1
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    1,
+                    1,
+                    1
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": {
+                "id": "T03",
+                "point": [
+                  3,
+                  3,
+                  3
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            },
+            "right": {
+              "id": "T06",
+              "point": [
+                6,
+                6,
+                6
+              ],
+              "axis": 2,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  6,
+                  6,
+                  6
+                ]
+              },
+              "left": {
+                "id": "T05",
+                "point": [
+                  5,
+                  5,
+                  5
+                ],
+                "axis": 0,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    5,
+                    5,
+                    5
+                  ]
+                },
+                "left": null,
+                "right": null
+              },
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T16",
+            "point": [
+              16,
+              16,
+              16
+            ],
+            "axis": 1,
+            "size": 21,
+            "bbox": {
+              "min": [
+                8,
+                8,
+                8
+              ],
+              "max": [
+                28,
+                28,
+                28
+              ]
+            },
+            "left": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  8,
+                  8,
+                  8
+                ],
+                "max": [
+                  15,
+                  15,
+                  15
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    8,
+                    8,
+                    8
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        8,
+                        8,
+                        8
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    15,
+                    15,
+                    15
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T15",
+                  "point": [
+                    15,
+                    15,
+                    15
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      15,
+                      15,
+                      15
+                    ],
+                    "max": [
+                      15,
+                      15,
+                      15
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T21",
+              "point": [
+                21,
+                21,
+                21
+              ],
+              "axis": 2,
+              "size": 12,
+              "bbox": {
+                "min": [
+                  17,
+                  17,
+                  17
+                ],
+                "max": [
+                  28,
+                  28,
+                  28
+                ]
+              },
+              "left": {
+                "id": "T19",
+                "point": [
+                  19,
+                  19,
+                  19
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    17,
+                    17,
+                    17
+                  ],
+                  "max": [
+                    20,
+                    20,
+                    20
+                  ]
+                },
+                "left": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": {
+                    "id": "T17",
+                    "point": [
+                      17,
+                      17,
+                      17
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        17,
+                        17,
+                        17
+                      ],
+                      "max": [
+                        17,
+                        17,
+                        17
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  },
+                  "right": null
+                },
+                "right": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T23",
+                "point": [
+                  23,
+                  23,
+                  23
+                ],
+                "axis": 0,
+                "size": 7,
+                "bbox": {
+                  "min": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "max": [
+                    28,
+                    28,
+                    28
+                  ]
+                },
+                "left": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T26",
+                  "point": [
+                    26,
+                    26,
+                    26
+                  ],
+                  "axis": 1,
+                  "size": 5,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      28,
+                      28,
+                      28
+                    ]
+                  },
+                  "left": {
+                    "id": "T25",
+                    "point": [
+                      25,
+                      25,
+                      25
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        24,
+                        24,
+                        24
+                      ],
+                      "max": [
+                        25,
+                        25,
+                        25
+                      ]
+                    },
+                    "left": {
+                      "id": "T24",
+                      "point": [
+                        24,
+                        24,
+                        24
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          24,
+                          24,
+                          24
+                        ],
+                        "max": [
+                          24,
+                          24,
+                          24
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    },
+                    "right": null
+                  },
+                  "right": {
+                    "id": "T28",
+                    "point": [
+                      28,
+                      28,
+                      28
+                    ],
+                    "axis": 2,
+                    "size": 2,
+                    "bbox": {
+                      "min": [
+                        27,
+                        27,
+                        27
+                      ],
+                      "max": [
+                        28,
+                        28,
+                        28
+                      ]
+                    },
+                    "left": {
+                      "id": "T27",
+                      "point": [
+                        27,
+                        27,
+                        27
+                      ],
+                      "axis": 0,
+                      "size": 1,
+                      "bbox": {
+                        "min": [
+                          27,
+                          27,
+                          27
+                        ],
+                        "max": [
+                          27,
+                          27,
+                          27
+                        ]
+                      },
+                      "left": null,
+                      "right": null
+                    },
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 29,
+        "heightPlain": 29,
+        "heightBalanced": 5,
+        "rebuilds": 9,
+        "rebuiltSize": 29,
+        "plainCumulativeMs": 0.4377,
+        "balancedCumulativeMs": 0.4886,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 29,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              29,
+              29,
+              29
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 28,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                29,
+                29,
+                29
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 27,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  29,
+                  29,
+                  29
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 26,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    29,
+                    29,
+                    29
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 25,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      29,
+                      29,
+                      29
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 24,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        29,
+                        29,
+                        29
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 23,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          29,
+                          29,
+                          29
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 22,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            29,
+                            29,
+                            29
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 21,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              29,
+                              29,
+                              29
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 20,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                29,
+                                29,
+                                29
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 19,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  29,
+                                  29,
+                                  29
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 18,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    29,
+                                    29,
+                                    29
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 17,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      29,
+                                      29,
+                                      29
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 16,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        29,
+                                        29,
+                                        29
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 15,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          29,
+                                          29,
+                                          29
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 14,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            29,
+                                            29,
+                                            29
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 13,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              29,
+                                              29,
+                                              29
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 12,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                29,
+                                                29,
+                                                29
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 11,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  29,
+                                                  29,
+                                                  29
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 10,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    29,
+                                                    29,
+                                                    29
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 9,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      29,
+                                                      29,
+                                                      29
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 8,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        29,
+                                                        29,
+                                                        29
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 7,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          29,
+                                                          29,
+                                                          29
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 6,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            29,
+                                                            29,
+                                                            29
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 5,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              29,
+                                                              29,
+                                                              29
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 4,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                29,
+                                                                29,
+                                                                29
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T27",
+                                                              "point": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ],
+                                                              "axis": 2,
+                                                              "size": 3,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ],
+                                                                "max": [
+                                                                  29,
+                                                                  29,
+                                                                  29
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": {
+                                                                "id": "T28",
+                                                                "point": [
+                                                                  28,
+                                                                  28,
+                                                                  28
+                                                                ],
+                                                                "axis": 0,
+                                                                "size": 2,
+                                                                "bbox": {
+                                                                  "min": [
+                                                                    28,
+                                                                    28,
+                                                                    28
+                                                                  ],
+                                                                  "max": [
+                                                                    29,
+                                                                    29,
+                                                                    29
+                                                                  ]
+                                                                },
+                                                                "left": null,
+                                                                "right": {
+                                                                  "id": "T29",
+                                                                  "point": [
+                                                                    29,
+                                                                    29,
+                                                                    29
+                                                                  ],
+                                                                  "axis": 1,
+                                                                  "size": 1,
+                                                                  "bbox": {
+                                                                    "min": [
+                                                                      29,
+                                                                      29,
+                                                                      29
+                                                                    ],
+                                                                    "max": [
+                                                                      29,
+                                                                      29,
+                                                                      29
+                                                                    ]
+                                                                  },
+                                                                  "left": null,
+                                                                  "right": null
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T15",
+          "point": [
+            15,
+            15,
+            15
+          ],
+          "axis": 0,
+          "size": 29,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              29,
+              29,
+              29
+            ]
+          },
+          "left": {
+            "id": "T08",
+            "point": [
+              8,
+              8,
+              8
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": {
+                "id": "T02",
+                "point": [
+                  2,
+                  2,
+                  2
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": {
+                  "id": "T01",
+                  "point": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "max": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T03",
+                  "point": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      3,
+                      3,
+                      3
+                    ],
+                    "max": [
+                      3,
+                      3,
+                      3
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T06",
+                "point": [
+                  6,
+                  6,
+                  6
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      5,
+                      5,
+                      5
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T07",
+                  "point": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      7,
+                      7,
+                      7
+                    ],
+                    "max": [
+                      7,
+                      7,
+                      7
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  9,
+                  9,
+                  9
+                ],
+                "max": [
+                  14,
+                  14,
+                  14
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    14,
+                    14,
+                    14
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              }
+            }
+          },
+          "right": {
+            "id": "T23",
+            "point": [
+              23,
+              23,
+              23
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                16,
+                16,
+                16
+              ],
+              "max": [
+                29,
+                29,
+                29
+              ]
+            },
+            "left": {
+              "id": "T19",
+              "point": [
+                19,
+                19,
+                19
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  16,
+                  16,
+                  16
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": {
+                "id": "T17",
+                "point": [
+                  17,
+                  17,
+                  17
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "max": [
+                    18,
+                    18,
+                    18
+                  ]
+                },
+                "left": {
+                  "id": "T16",
+                  "point": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "max": [
+                      16,
+                      16,
+                      16
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      18,
+                      18,
+                      18
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T21",
+                "point": [
+                  21,
+                  21,
+                  21
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "max": [
+                    22,
+                    22,
+                    22
+                  ]
+                },
+                "left": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T27",
+              "point": [
+                27,
+                27,
+                27
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  24,
+                  24,
+                  24
+                ],
+                "max": [
+                  29,
+                  29,
+                  29
+                ]
+              },
+              "left": {
+                "id": "T25",
+                "point": [
+                  25,
+                  25,
+                  25
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "max": [
+                    26,
+                    26,
+                    26
+                  ]
+                },
+                "left": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      24,
+                      24,
+                      24
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T26",
+                  "point": [
+                    26,
+                    26,
+                    26
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      26,
+                      26,
+                      26
+                    ],
+                    "max": [
+                      26,
+                      26,
+                      26
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T29",
+                "point": [
+                  29,
+                  29,
+                  29
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "max": [
+                    29,
+                    29,
+                    29
+                  ]
+                },
+                "left": {
+                  "id": "T28",
+                  "point": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      28,
+                      28,
+                      28
+                    ],
+                    "max": [
+                      28,
+                      28,
+                      28
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 30,
+        "heightPlain": 30,
+        "heightBalanced": 5,
+        "rebuilds": 9,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.4658,
+        "balancedCumulativeMs": 0.4968,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 30,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              30,
+              30,
+              30
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 29,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                30,
+                30,
+                30
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 28,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  30,
+                  30,
+                  30
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 27,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    30,
+                    30,
+                    30
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 26,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      30,
+                      30,
+                      30
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 25,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        30,
+                        30,
+                        30
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 24,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          30,
+                          30,
+                          30
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 23,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            30,
+                            30,
+                            30
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 22,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              30,
+                              30,
+                              30
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 21,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                30,
+                                30,
+                                30
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 20,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  30,
+                                  30,
+                                  30
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 19,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    30,
+                                    30,
+                                    30
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 18,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      30,
+                                      30,
+                                      30
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 17,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        30,
+                                        30,
+                                        30
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 16,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          30,
+                                          30,
+                                          30
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 15,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            30,
+                                            30,
+                                            30
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 14,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              30,
+                                              30,
+                                              30
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 13,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                30,
+                                                30,
+                                                30
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 12,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  30,
+                                                  30,
+                                                  30
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 11,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    30,
+                                                    30,
+                                                    30
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 10,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      30,
+                                                      30,
+                                                      30
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 9,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        30,
+                                                        30,
+                                                        30
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 8,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          30,
+                                                          30,
+                                                          30
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 7,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            30,
+                                                            30,
+                                                            30
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 6,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              30,
+                                                              30,
+                                                              30
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 5,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                30,
+                                                                30,
+                                                                30
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T27",
+                                                              "point": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ],
+                                                              "axis": 2,
+                                                              "size": 4,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ],
+                                                                "max": [
+                                                                  30,
+                                                                  30,
+                                                                  30
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": {
+                                                                "id": "T28",
+                                                                "point": [
+                                                                  28,
+                                                                  28,
+                                                                  28
+                                                                ],
+                                                                "axis": 0,
+                                                                "size": 3,
+                                                                "bbox": {
+                                                                  "min": [
+                                                                    28,
+                                                                    28,
+                                                                    28
+                                                                  ],
+                                                                  "max": [
+                                                                    30,
+                                                                    30,
+                                                                    30
+                                                                  ]
+                                                                },
+                                                                "left": null,
+                                                                "right": {
+                                                                  "id": "T29",
+                                                                  "point": [
+                                                                    29,
+                                                                    29,
+                                                                    29
+                                                                  ],
+                                                                  "axis": 1,
+                                                                  "size": 2,
+                                                                  "bbox": {
+                                                                    "min": [
+                                                                      29,
+                                                                      29,
+                                                                      29
+                                                                    ],
+                                                                    "max": [
+                                                                      30,
+                                                                      30,
+                                                                      30
+                                                                    ]
+                                                                  },
+                                                                  "left": null,
+                                                                  "right": {
+                                                                    "id": "T30",
+                                                                    "point": [
+                                                                      30,
+                                                                      30,
+                                                                      30
+                                                                    ],
+                                                                    "axis": 2,
+                                                                    "size": 1,
+                                                                    "bbox": {
+                                                                      "min": [
+                                                                        30,
+                                                                        30,
+                                                                        30
+                                                                      ],
+                                                                      "max": [
+                                                                        30,
+                                                                        30,
+                                                                        30
+                                                                      ]
+                                                                    },
+                                                                    "left": null,
+                                                                    "right": null
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T15",
+          "point": [
+            15,
+            15,
+            15
+          ],
+          "axis": 0,
+          "size": 30,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              30,
+              30,
+              30
+            ]
+          },
+          "left": {
+            "id": "T08",
+            "point": [
+              8,
+              8,
+              8
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": {
+                "id": "T02",
+                "point": [
+                  2,
+                  2,
+                  2
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": {
+                  "id": "T01",
+                  "point": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "max": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T03",
+                  "point": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      3,
+                      3,
+                      3
+                    ],
+                    "max": [
+                      3,
+                      3,
+                      3
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T06",
+                "point": [
+                  6,
+                  6,
+                  6
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      5,
+                      5,
+                      5
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T07",
+                  "point": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      7,
+                      7,
+                      7
+                    ],
+                    "max": [
+                      7,
+                      7,
+                      7
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  9,
+                  9,
+                  9
+                ],
+                "max": [
+                  14,
+                  14,
+                  14
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    14,
+                    14,
+                    14
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              }
+            }
+          },
+          "right": {
+            "id": "T23",
+            "point": [
+              23,
+              23,
+              23
+            ],
+            "axis": 1,
+            "size": 15,
+            "bbox": {
+              "min": [
+                16,
+                16,
+                16
+              ],
+              "max": [
+                30,
+                30,
+                30
+              ]
+            },
+            "left": {
+              "id": "T19",
+              "point": [
+                19,
+                19,
+                19
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  16,
+                  16,
+                  16
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": {
+                "id": "T17",
+                "point": [
+                  17,
+                  17,
+                  17
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "max": [
+                    18,
+                    18,
+                    18
+                  ]
+                },
+                "left": {
+                  "id": "T16",
+                  "point": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "max": [
+                      16,
+                      16,
+                      16
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      18,
+                      18,
+                      18
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T21",
+                "point": [
+                  21,
+                  21,
+                  21
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "max": [
+                    22,
+                    22,
+                    22
+                  ]
+                },
+                "left": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T27",
+              "point": [
+                27,
+                27,
+                27
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  24,
+                  24,
+                  24
+                ],
+                "max": [
+                  30,
+                  30,
+                  30
+                ]
+              },
+              "left": {
+                "id": "T25",
+                "point": [
+                  25,
+                  25,
+                  25
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "max": [
+                    26,
+                    26,
+                    26
+                  ]
+                },
+                "left": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      24,
+                      24,
+                      24
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T26",
+                  "point": [
+                    26,
+                    26,
+                    26
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      26,
+                      26,
+                      26
+                    ],
+                    "max": [
+                      26,
+                      26,
+                      26
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T29",
+                "point": [
+                  29,
+                  29,
+                  29
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "max": [
+                    30,
+                    30,
+                    30
+                  ]
+                },
+                "left": {
+                  "id": "T28",
+                  "point": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      28,
+                      28,
+                      28
+                    ],
+                    "max": [
+                      28,
+                      28,
+                      28
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T30",
+                  "point": [
+                    30,
+                    30,
+                    30
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      30,
+                      30,
+                      30
+                    ],
+                    "max": [
+                      30,
+                      30,
+                      30
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            }
+          }
+        }
+      },
+      {
+        "n": 31,
+        "heightPlain": 31,
+        "heightBalanced": 6,
+        "rebuilds": 9,
+        "rebuiltSize": 0,
+        "plainCumulativeMs": 0.4949,
+        "balancedCumulativeMs": 0.5058,
+        "plainTree": {
+          "id": "T01",
+          "point": [
+            1,
+            1,
+            1
+          ],
+          "axis": 0,
+          "size": 31,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              31,
+              31,
+              31
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 1,
+            "size": 30,
+            "bbox": {
+              "min": [
+                2,
+                2,
+                2
+              ],
+              "max": [
+                31,
+                31,
+                31
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 2,
+              "size": 29,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  31,
+                  31,
+                  31
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T04",
+                "point": [
+                  4,
+                  4,
+                  4
+                ],
+                "axis": 0,
+                "size": 28,
+                "bbox": {
+                  "min": [
+                    4,
+                    4,
+                    4
+                  ],
+                  "max": [
+                    31,
+                    31,
+                    31
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 27,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      31,
+                      31,
+                      31
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T06",
+                    "point": [
+                      6,
+                      6,
+                      6
+                    ],
+                    "axis": 2,
+                    "size": 26,
+                    "bbox": {
+                      "min": [
+                        6,
+                        6,
+                        6
+                      ],
+                      "max": [
+                        31,
+                        31,
+                        31
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T07",
+                      "point": [
+                        7,
+                        7,
+                        7
+                      ],
+                      "axis": 0,
+                      "size": 25,
+                      "bbox": {
+                        "min": [
+                          7,
+                          7,
+                          7
+                        ],
+                        "max": [
+                          31,
+                          31,
+                          31
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T08",
+                        "point": [
+                          8,
+                          8,
+                          8
+                        ],
+                        "axis": 1,
+                        "size": 24,
+                        "bbox": {
+                          "min": [
+                            8,
+                            8,
+                            8
+                          ],
+                          "max": [
+                            31,
+                            31,
+                            31
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T09",
+                          "point": [
+                            9,
+                            9,
+                            9
+                          ],
+                          "axis": 2,
+                          "size": 23,
+                          "bbox": {
+                            "min": [
+                              9,
+                              9,
+                              9
+                            ],
+                            "max": [
+                              31,
+                              31,
+                              31
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T10",
+                            "point": [
+                              10,
+                              10,
+                              10
+                            ],
+                            "axis": 0,
+                            "size": 22,
+                            "bbox": {
+                              "min": [
+                                10,
+                                10,
+                                10
+                              ],
+                              "max": [
+                                31,
+                                31,
+                                31
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T11",
+                              "point": [
+                                11,
+                                11,
+                                11
+                              ],
+                              "axis": 1,
+                              "size": 21,
+                              "bbox": {
+                                "min": [
+                                  11,
+                                  11,
+                                  11
+                                ],
+                                "max": [
+                                  31,
+                                  31,
+                                  31
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T12",
+                                "point": [
+                                  12,
+                                  12,
+                                  12
+                                ],
+                                "axis": 2,
+                                "size": 20,
+                                "bbox": {
+                                  "min": [
+                                    12,
+                                    12,
+                                    12
+                                  ],
+                                  "max": [
+                                    31,
+                                    31,
+                                    31
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T13",
+                                  "point": [
+                                    13,
+                                    13,
+                                    13
+                                  ],
+                                  "axis": 0,
+                                  "size": 19,
+                                  "bbox": {
+                                    "min": [
+                                      13,
+                                      13,
+                                      13
+                                    ],
+                                    "max": [
+                                      31,
+                                      31,
+                                      31
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T14",
+                                    "point": [
+                                      14,
+                                      14,
+                                      14
+                                    ],
+                                    "axis": 1,
+                                    "size": 18,
+                                    "bbox": {
+                                      "min": [
+                                        14,
+                                        14,
+                                        14
+                                      ],
+                                      "max": [
+                                        31,
+                                        31,
+                                        31
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T15",
+                                      "point": [
+                                        15,
+                                        15,
+                                        15
+                                      ],
+                                      "axis": 2,
+                                      "size": 17,
+                                      "bbox": {
+                                        "min": [
+                                          15,
+                                          15,
+                                          15
+                                        ],
+                                        "max": [
+                                          31,
+                                          31,
+                                          31
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T16",
+                                        "point": [
+                                          16,
+                                          16,
+                                          16
+                                        ],
+                                        "axis": 0,
+                                        "size": 16,
+                                        "bbox": {
+                                          "min": [
+                                            16,
+                                            16,
+                                            16
+                                          ],
+                                          "max": [
+                                            31,
+                                            31,
+                                            31
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T17",
+                                          "point": [
+                                            17,
+                                            17,
+                                            17
+                                          ],
+                                          "axis": 1,
+                                          "size": 15,
+                                          "bbox": {
+                                            "min": [
+                                              17,
+                                              17,
+                                              17
+                                            ],
+                                            "max": [
+                                              31,
+                                              31,
+                                              31
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T18",
+                                            "point": [
+                                              18,
+                                              18,
+                                              18
+                                            ],
+                                            "axis": 2,
+                                            "size": 14,
+                                            "bbox": {
+                                              "min": [
+                                                18,
+                                                18,
+                                                18
+                                              ],
+                                              "max": [
+                                                31,
+                                                31,
+                                                31
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T19",
+                                              "point": [
+                                                19,
+                                                19,
+                                                19
+                                              ],
+                                              "axis": 0,
+                                              "size": 13,
+                                              "bbox": {
+                                                "min": [
+                                                  19,
+                                                  19,
+                                                  19
+                                                ],
+                                                "max": [
+                                                  31,
+                                                  31,
+                                                  31
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T20",
+                                                "point": [
+                                                  20,
+                                                  20,
+                                                  20
+                                                ],
+                                                "axis": 1,
+                                                "size": 12,
+                                                "bbox": {
+                                                  "min": [
+                                                    20,
+                                                    20,
+                                                    20
+                                                  ],
+                                                  "max": [
+                                                    31,
+                                                    31,
+                                                    31
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T21",
+                                                  "point": [
+                                                    21,
+                                                    21,
+                                                    21
+                                                  ],
+                                                  "axis": 2,
+                                                  "size": 11,
+                                                  "bbox": {
+                                                    "min": [
+                                                      21,
+                                                      21,
+                                                      21
+                                                    ],
+                                                    "max": [
+                                                      31,
+                                                      31,
+                                                      31
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T22",
+                                                    "point": [
+                                                      22,
+                                                      22,
+                                                      22
+                                                    ],
+                                                    "axis": 0,
+                                                    "size": 10,
+                                                    "bbox": {
+                                                      "min": [
+                                                        22,
+                                                        22,
+                                                        22
+                                                      ],
+                                                      "max": [
+                                                        31,
+                                                        31,
+                                                        31
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T23",
+                                                      "point": [
+                                                        23,
+                                                        23,
+                                                        23
+                                                      ],
+                                                      "axis": 1,
+                                                      "size": 9,
+                                                      "bbox": {
+                                                        "min": [
+                                                          23,
+                                                          23,
+                                                          23
+                                                        ],
+                                                        "max": [
+                                                          31,
+                                                          31,
+                                                          31
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T24",
+                                                        "point": [
+                                                          24,
+                                                          24,
+                                                          24
+                                                        ],
+                                                        "axis": 2,
+                                                        "size": 8,
+                                                        "bbox": {
+                                                          "min": [
+                                                            24,
+                                                            24,
+                                                            24
+                                                          ],
+                                                          "max": [
+                                                            31,
+                                                            31,
+                                                            31
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T25",
+                                                          "point": [
+                                                            25,
+                                                            25,
+                                                            25
+                                                          ],
+                                                          "axis": 0,
+                                                          "size": 7,
+                                                          "bbox": {
+                                                            "min": [
+                                                              25,
+                                                              25,
+                                                              25
+                                                            ],
+                                                            "max": [
+                                                              31,
+                                                              31,
+                                                              31
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T26",
+                                                            "point": [
+                                                              26,
+                                                              26,
+                                                              26
+                                                            ],
+                                                            "axis": 1,
+                                                            "size": 6,
+                                                            "bbox": {
+                                                              "min": [
+                                                                26,
+                                                                26,
+                                                                26
+                                                              ],
+                                                              "max": [
+                                                                31,
+                                                                31,
+                                                                31
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T27",
+                                                              "point": [
+                                                                27,
+                                                                27,
+                                                                27
+                                                              ],
+                                                              "axis": 2,
+                                                              "size": 5,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  27,
+                                                                  27,
+                                                                  27
+                                                                ],
+                                                                "max": [
+                                                                  31,
+                                                                  31,
+                                                                  31
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": {
+                                                                "id": "T28",
+                                                                "point": [
+                                                                  28,
+                                                                  28,
+                                                                  28
+                                                                ],
+                                                                "axis": 0,
+                                                                "size": 4,
+                                                                "bbox": {
+                                                                  "min": [
+                                                                    28,
+                                                                    28,
+                                                                    28
+                                                                  ],
+                                                                  "max": [
+                                                                    31,
+                                                                    31,
+                                                                    31
+                                                                  ]
+                                                                },
+                                                                "left": null,
+                                                                "right": {
+                                                                  "id": "T29",
+                                                                  "point": [
+                                                                    29,
+                                                                    29,
+                                                                    29
+                                                                  ],
+                                                                  "axis": 1,
+                                                                  "size": 3,
+                                                                  "bbox": {
+                                                                    "min": [
+                                                                      29,
+                                                                      29,
+                                                                      29
+                                                                    ],
+                                                                    "max": [
+                                                                      31,
+                                                                      31,
+                                                                      31
+                                                                    ]
+                                                                  },
+                                                                  "left": null,
+                                                                  "right": {
+                                                                    "id": "T30",
+                                                                    "point": [
+                                                                      30,
+                                                                      30,
+                                                                      30
+                                                                    ],
+                                                                    "axis": 2,
+                                                                    "size": 2,
+                                                                    "bbox": {
+                                                                      "min": [
+                                                                        30,
+                                                                        30,
+                                                                        30
+                                                                      ],
+                                                                      "max": [
+                                                                        31,
+                                                                        31,
+                                                                        31
+                                                                      ]
+                                                                    },
+                                                                    "left": null,
+                                                                    "right": {
+                                                                      "id": "T31",
+                                                                      "point": [
+                                                                        31,
+                                                                        31,
+                                                                        31
+                                                                      ],
+                                                                      "axis": 0,
+                                                                      "size": 1,
+                                                                      "bbox": {
+                                                                        "min": [
+                                                                          31,
+                                                                          31,
+                                                                          31
+                                                                        ],
+                                                                        "max": [
+                                                                          31,
+                                                                          31,
+                                                                          31
+                                                                        ]
+                                                                      },
+                                                                      "left": null,
+                                                                      "right": null
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "balancedTree": {
+          "id": "T15",
+          "point": [
+            15,
+            15,
+            15
+          ],
+          "axis": 0,
+          "size": 31,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              31,
+              31,
+              31
+            ]
+          },
+          "left": {
+            "id": "T08",
+            "point": [
+              8,
+              8,
+              8
+            ],
+            "axis": 1,
+            "size": 14,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": {
+              "id": "T04",
+              "point": [
+                4,
+                4,
+                4
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": {
+                "id": "T02",
+                "point": [
+                  2,
+                  2,
+                  2
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "max": [
+                    3,
+                    3,
+                    3
+                  ]
+                },
+                "left": {
+                  "id": "T01",
+                  "point": [
+                    1,
+                    1,
+                    1
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      1,
+                      1,
+                      1
+                    ],
+                    "max": [
+                      1,
+                      1,
+                      1
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T03",
+                  "point": [
+                    3,
+                    3,
+                    3
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      3,
+                      3,
+                      3
+                    ],
+                    "max": [
+                      3,
+                      3,
+                      3
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T06",
+                "point": [
+                  6,
+                  6,
+                  6
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "max": [
+                    7,
+                    7,
+                    7
+                  ]
+                },
+                "left": {
+                  "id": "T05",
+                  "point": [
+                    5,
+                    5,
+                    5
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      5,
+                      5,
+                      5
+                    ],
+                    "max": [
+                      5,
+                      5,
+                      5
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T07",
+                  "point": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      7,
+                      7,
+                      7
+                    ],
+                    "max": [
+                      7,
+                      7,
+                      7
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T12",
+              "point": [
+                12,
+                12,
+                12
+              ],
+              "axis": 2,
+              "size": 6,
+              "bbox": {
+                "min": [
+                  9,
+                  9,
+                  9
+                ],
+                "max": [
+                  14,
+                  14,
+                  14
+                ]
+              },
+              "left": {
+                "id": "T10",
+                "point": [
+                  10,
+                  10,
+                  10
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "max": [
+                    11,
+                    11,
+                    11
+                  ]
+                },
+                "left": {
+                  "id": "T09",
+                  "point": [
+                    9,
+                    9,
+                    9
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      9,
+                      9,
+                      9
+                    ],
+                    "max": [
+                      9,
+                      9,
+                      9
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T11",
+                  "point": [
+                    11,
+                    11,
+                    11
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      11,
+                      11,
+                      11
+                    ],
+                    "max": [
+                      11,
+                      11,
+                      11
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T14",
+                "point": [
+                  14,
+                  14,
+                  14
+                ],
+                "axis": 0,
+                "size": 2,
+                "bbox": {
+                  "min": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "max": [
+                    14,
+                    14,
+                    14
+                  ]
+                },
+                "left": {
+                  "id": "T13",
+                  "point": [
+                    13,
+                    13,
+                    13
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      13,
+                      13,
+                      13
+                    ],
+                    "max": [
+                      13,
+                      13,
+                      13
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": null
+              }
+            }
+          },
+          "right": {
+            "id": "T23",
+            "point": [
+              23,
+              23,
+              23
+            ],
+            "axis": 1,
+            "size": 16,
+            "bbox": {
+              "min": [
+                16,
+                16,
+                16
+              ],
+              "max": [
+                31,
+                31,
+                31
+              ]
+            },
+            "left": {
+              "id": "T19",
+              "point": [
+                19,
+                19,
+                19
+              ],
+              "axis": 2,
+              "size": 7,
+              "bbox": {
+                "min": [
+                  16,
+                  16,
+                  16
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": {
+                "id": "T17",
+                "point": [
+                  17,
+                  17,
+                  17
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "max": [
+                    18,
+                    18,
+                    18
+                  ]
+                },
+                "left": {
+                  "id": "T16",
+                  "point": [
+                    16,
+                    16,
+                    16
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      16,
+                      16,
+                      16
+                    ],
+                    "max": [
+                      16,
+                      16,
+                      16
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T18",
+                  "point": [
+                    18,
+                    18,
+                    18
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      18,
+                      18,
+                      18
+                    ],
+                    "max": [
+                      18,
+                      18,
+                      18
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T21",
+                "point": [
+                  21,
+                  21,
+                  21
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "max": [
+                    22,
+                    22,
+                    22
+                  ]
+                },
+                "left": {
+                  "id": "T20",
+                  "point": [
+                    20,
+                    20,
+                    20
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      20,
+                      20,
+                      20
+                    ],
+                    "max": [
+                      20,
+                      20,
+                      20
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T22",
+                  "point": [
+                    22,
+                    22,
+                    22
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      22,
+                      22,
+                      22
+                    ],
+                    "max": [
+                      22,
+                      22,
+                      22
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              }
+            },
+            "right": {
+              "id": "T27",
+              "point": [
+                27,
+                27,
+                27
+              ],
+              "axis": 2,
+              "size": 8,
+              "bbox": {
+                "min": [
+                  24,
+                  24,
+                  24
+                ],
+                "max": [
+                  31,
+                  31,
+                  31
+                ]
+              },
+              "left": {
+                "id": "T25",
+                "point": [
+                  25,
+                  25,
+                  25
+                ],
+                "axis": 0,
+                "size": 3,
+                "bbox": {
+                  "min": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "max": [
+                    26,
+                    26,
+                    26
+                  ]
+                },
+                "left": {
+                  "id": "T24",
+                  "point": [
+                    24,
+                    24,
+                    24
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      24,
+                      24,
+                      24
+                    ],
+                    "max": [
+                      24,
+                      24,
+                      24
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T26",
+                  "point": [
+                    26,
+                    26,
+                    26
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      26,
+                      26,
+                      26
+                    ],
+                    "max": [
+                      26,
+                      26,
+                      26
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                }
+              },
+              "right": {
+                "id": "T29",
+                "point": [
+                  29,
+                  29,
+                  29
+                ],
+                "axis": 0,
+                "size": 4,
+                "bbox": {
+                  "min": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "max": [
+                    31,
+                    31,
+                    31
+                  ]
+                },
+                "left": {
+                  "id": "T28",
+                  "point": [
+                    28,
+                    28,
+                    28
+                  ],
+                  "axis": 1,
+                  "size": 1,
+                  "bbox": {
+                    "min": [
+                      28,
+                      28,
+                      28
+                    ],
+                    "max": [
+                      28,
+                      28,
+                      28
+                    ]
+                  },
+                  "left": null,
+                  "right": null
+                },
+                "right": {
+                  "id": "T30",
+                  "point": [
+                    30,
+                    30,
+                    30
+                  ],
+                  "axis": 1,
+                  "size": 2,
+                  "bbox": {
+                    "min": [
+                      30,
+                      30,
+                      30
+                    ],
+                    "max": [
+                      31,
+                      31,
+                      31
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T31",
+                    "point": [
+                      31,
+                      31,
+                      31
+                    ],
+                    "axis": 2,
+                    "size": 1,
+                    "bbox": {
+                      "min": [
+                        31,
+                        31,
+                        31
+                      ],
+                      "max": [
+                        31,
+                        31,
+                        31
+                      ]
+                    },
+                    "left": null,
+                    "right": null
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
+    "plainTree": {
+      "id": "T01",
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "axis": 0,
+      "size": 31,
+      "bbox": {
+        "min": [
+          1,
+          1,
+          1
+        ],
+        "max": [
+          31,
+          31,
+          31
+        ]
+      },
+      "left": null,
+      "right": {
+        "id": "T02",
+        "point": [
+          2,
+          2,
+          2
+        ],
+        "axis": 1,
+        "size": 30,
+        "bbox": {
+          "min": [
+            2,
+            2,
+            2
+          ],
+          "max": [
+            31,
+            31,
+            31
+          ]
+        },
+        "left": null,
+        "right": {
+          "id": "T03",
+          "point": [
+            3,
+            3,
+            3
+          ],
+          "axis": 2,
+          "size": 29,
+          "bbox": {
+            "min": [
+              3,
+              3,
+              3
+            ],
+            "max": [
+              31,
+              31,
+              31
+            ]
+          },
+          "left": null,
+          "right": {
+            "id": "T04",
+            "point": [
+              4,
+              4,
+              4
+            ],
+            "axis": 0,
+            "size": 28,
+            "bbox": {
+              "min": [
+                4,
+                4,
+                4
+              ],
+              "max": [
+                31,
+                31,
+                31
+              ]
+            },
+            "left": null,
+            "right": {
+              "id": "T05",
+              "point": [
+                5,
+                5,
+                5
+              ],
+              "axis": 1,
+              "size": 27,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  31,
+                  31,
+                  31
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T06",
+                "point": [
+                  6,
+                  6,
+                  6
+                ],
+                "axis": 2,
+                "size": 26,
+                "bbox": {
+                  "min": [
+                    6,
+                    6,
+                    6
+                  ],
+                  "max": [
+                    31,
+                    31,
+                    31
+                  ]
+                },
+                "left": null,
+                "right": {
+                  "id": "T07",
+                  "point": [
+                    7,
+                    7,
+                    7
+                  ],
+                  "axis": 0,
+                  "size": 25,
+                  "bbox": {
+                    "min": [
+                      7,
+                      7,
+                      7
+                    ],
+                    "max": [
+                      31,
+                      31,
+                      31
+                    ]
+                  },
+                  "left": null,
+                  "right": {
+                    "id": "T08",
+                    "point": [
+                      8,
+                      8,
+                      8
+                    ],
+                    "axis": 1,
+                    "size": 24,
+                    "bbox": {
+                      "min": [
+                        8,
+                        8,
+                        8
+                      ],
+                      "max": [
+                        31,
+                        31,
+                        31
+                      ]
+                    },
+                    "left": null,
+                    "right": {
+                      "id": "T09",
+                      "point": [
+                        9,
+                        9,
+                        9
+                      ],
+                      "axis": 2,
+                      "size": 23,
+                      "bbox": {
+                        "min": [
+                          9,
+                          9,
+                          9
+                        ],
+                        "max": [
+                          31,
+                          31,
+                          31
+                        ]
+                      },
+                      "left": null,
+                      "right": {
+                        "id": "T10",
+                        "point": [
+                          10,
+                          10,
+                          10
+                        ],
+                        "axis": 0,
+                        "size": 22,
+                        "bbox": {
+                          "min": [
+                            10,
+                            10,
+                            10
+                          ],
+                          "max": [
+                            31,
+                            31,
+                            31
+                          ]
+                        },
+                        "left": null,
+                        "right": {
+                          "id": "T11",
+                          "point": [
+                            11,
+                            11,
+                            11
+                          ],
+                          "axis": 1,
+                          "size": 21,
+                          "bbox": {
+                            "min": [
+                              11,
+                              11,
+                              11
+                            ],
+                            "max": [
+                              31,
+                              31,
+                              31
+                            ]
+                          },
+                          "left": null,
+                          "right": {
+                            "id": "T12",
+                            "point": [
+                              12,
+                              12,
+                              12
+                            ],
+                            "axis": 2,
+                            "size": 20,
+                            "bbox": {
+                              "min": [
+                                12,
+                                12,
+                                12
+                              ],
+                              "max": [
+                                31,
+                                31,
+                                31
+                              ]
+                            },
+                            "left": null,
+                            "right": {
+                              "id": "T13",
+                              "point": [
+                                13,
+                                13,
+                                13
+                              ],
+                              "axis": 0,
+                              "size": 19,
+                              "bbox": {
+                                "min": [
+                                  13,
+                                  13,
+                                  13
+                                ],
+                                "max": [
+                                  31,
+                                  31,
+                                  31
+                                ]
+                              },
+                              "left": null,
+                              "right": {
+                                "id": "T14",
+                                "point": [
+                                  14,
+                                  14,
+                                  14
+                                ],
+                                "axis": 1,
+                                "size": 18,
+                                "bbox": {
+                                  "min": [
+                                    14,
+                                    14,
+                                    14
+                                  ],
+                                  "max": [
+                                    31,
+                                    31,
+                                    31
+                                  ]
+                                },
+                                "left": null,
+                                "right": {
+                                  "id": "T15",
+                                  "point": [
+                                    15,
+                                    15,
+                                    15
+                                  ],
+                                  "axis": 2,
+                                  "size": 17,
+                                  "bbox": {
+                                    "min": [
+                                      15,
+                                      15,
+                                      15
+                                    ],
+                                    "max": [
+                                      31,
+                                      31,
+                                      31
+                                    ]
+                                  },
+                                  "left": null,
+                                  "right": {
+                                    "id": "T16",
+                                    "point": [
+                                      16,
+                                      16,
+                                      16
+                                    ],
+                                    "axis": 0,
+                                    "size": 16,
+                                    "bbox": {
+                                      "min": [
+                                        16,
+                                        16,
+                                        16
+                                      ],
+                                      "max": [
+                                        31,
+                                        31,
+                                        31
+                                      ]
+                                    },
+                                    "left": null,
+                                    "right": {
+                                      "id": "T17",
+                                      "point": [
+                                        17,
+                                        17,
+                                        17
+                                      ],
+                                      "axis": 1,
+                                      "size": 15,
+                                      "bbox": {
+                                        "min": [
+                                          17,
+                                          17,
+                                          17
+                                        ],
+                                        "max": [
+                                          31,
+                                          31,
+                                          31
+                                        ]
+                                      },
+                                      "left": null,
+                                      "right": {
+                                        "id": "T18",
+                                        "point": [
+                                          18,
+                                          18,
+                                          18
+                                        ],
+                                        "axis": 2,
+                                        "size": 14,
+                                        "bbox": {
+                                          "min": [
+                                            18,
+                                            18,
+                                            18
+                                          ],
+                                          "max": [
+                                            31,
+                                            31,
+                                            31
+                                          ]
+                                        },
+                                        "left": null,
+                                        "right": {
+                                          "id": "T19",
+                                          "point": [
+                                            19,
+                                            19,
+                                            19
+                                          ],
+                                          "axis": 0,
+                                          "size": 13,
+                                          "bbox": {
+                                            "min": [
+                                              19,
+                                              19,
+                                              19
+                                            ],
+                                            "max": [
+                                              31,
+                                              31,
+                                              31
+                                            ]
+                                          },
+                                          "left": null,
+                                          "right": {
+                                            "id": "T20",
+                                            "point": [
+                                              20,
+                                              20,
+                                              20
+                                            ],
+                                            "axis": 1,
+                                            "size": 12,
+                                            "bbox": {
+                                              "min": [
+                                                20,
+                                                20,
+                                                20
+                                              ],
+                                              "max": [
+                                                31,
+                                                31,
+                                                31
+                                              ]
+                                            },
+                                            "left": null,
+                                            "right": {
+                                              "id": "T21",
+                                              "point": [
+                                                21,
+                                                21,
+                                                21
+                                              ],
+                                              "axis": 2,
+                                              "size": 11,
+                                              "bbox": {
+                                                "min": [
+                                                  21,
+                                                  21,
+                                                  21
+                                                ],
+                                                "max": [
+                                                  31,
+                                                  31,
+                                                  31
+                                                ]
+                                              },
+                                              "left": null,
+                                              "right": {
+                                                "id": "T22",
+                                                "point": [
+                                                  22,
+                                                  22,
+                                                  22
+                                                ],
+                                                "axis": 0,
+                                                "size": 10,
+                                                "bbox": {
+                                                  "min": [
+                                                    22,
+                                                    22,
+                                                    22
+                                                  ],
+                                                  "max": [
+                                                    31,
+                                                    31,
+                                                    31
+                                                  ]
+                                                },
+                                                "left": null,
+                                                "right": {
+                                                  "id": "T23",
+                                                  "point": [
+                                                    23,
+                                                    23,
+                                                    23
+                                                  ],
+                                                  "axis": 1,
+                                                  "size": 9,
+                                                  "bbox": {
+                                                    "min": [
+                                                      23,
+                                                      23,
+                                                      23
+                                                    ],
+                                                    "max": [
+                                                      31,
+                                                      31,
+                                                      31
+                                                    ]
+                                                  },
+                                                  "left": null,
+                                                  "right": {
+                                                    "id": "T24",
+                                                    "point": [
+                                                      24,
+                                                      24,
+                                                      24
+                                                    ],
+                                                    "axis": 2,
+                                                    "size": 8,
+                                                    "bbox": {
+                                                      "min": [
+                                                        24,
+                                                        24,
+                                                        24
+                                                      ],
+                                                      "max": [
+                                                        31,
+                                                        31,
+                                                        31
+                                                      ]
+                                                    },
+                                                    "left": null,
+                                                    "right": {
+                                                      "id": "T25",
+                                                      "point": [
+                                                        25,
+                                                        25,
+                                                        25
+                                                      ],
+                                                      "axis": 0,
+                                                      "size": 7,
+                                                      "bbox": {
+                                                        "min": [
+                                                          25,
+                                                          25,
+                                                          25
+                                                        ],
+                                                        "max": [
+                                                          31,
+                                                          31,
+                                                          31
+                                                        ]
+                                                      },
+                                                      "left": null,
+                                                      "right": {
+                                                        "id": "T26",
+                                                        "point": [
+                                                          26,
+                                                          26,
+                                                          26
+                                                        ],
+                                                        "axis": 1,
+                                                        "size": 6,
+                                                        "bbox": {
+                                                          "min": [
+                                                            26,
+                                                            26,
+                                                            26
+                                                          ],
+                                                          "max": [
+                                                            31,
+                                                            31,
+                                                            31
+                                                          ]
+                                                        },
+                                                        "left": null,
+                                                        "right": {
+                                                          "id": "T27",
+                                                          "point": [
+                                                            27,
+                                                            27,
+                                                            27
+                                                          ],
+                                                          "axis": 2,
+                                                          "size": 5,
+                                                          "bbox": {
+                                                            "min": [
+                                                              27,
+                                                              27,
+                                                              27
+                                                            ],
+                                                            "max": [
+                                                              31,
+                                                              31,
+                                                              31
+                                                            ]
+                                                          },
+                                                          "left": null,
+                                                          "right": {
+                                                            "id": "T28",
+                                                            "point": [
+                                                              28,
+                                                              28,
+                                                              28
+                                                            ],
+                                                            "axis": 0,
+                                                            "size": 4,
+                                                            "bbox": {
+                                                              "min": [
+                                                                28,
+                                                                28,
+                                                                28
+                                                              ],
+                                                              "max": [
+                                                                31,
+                                                                31,
+                                                                31
+                                                              ]
+                                                            },
+                                                            "left": null,
+                                                            "right": {
+                                                              "id": "T29",
+                                                              "point": [
+                                                                29,
+                                                                29,
+                                                                29
+                                                              ],
+                                                              "axis": 1,
+                                                              "size": 3,
+                                                              "bbox": {
+                                                                "min": [
+                                                                  29,
+                                                                  29,
+                                                                  29
+                                                                ],
+                                                                "max": [
+                                                                  31,
+                                                                  31,
+                                                                  31
+                                                                ]
+                                                              },
+                                                              "left": null,
+                                                              "right": {
+                                                                "id": "T30",
+                                                                "point": [
+                                                                  30,
+                                                                  30,
+                                                                  30
+                                                                ],
+                                                                "axis": 2,
+                                                                "size": 2,
+                                                                "bbox": {
+                                                                  "min": [
+                                                                    30,
+                                                                    30,
+                                                                    30
+                                                                  ],
+                                                                  "max": [
+                                                                    31,
+                                                                    31,
+                                                                    31
+                                                                  ]
+                                                                },
+                                                                "left": null,
+                                                                "right": {
+                                                                  "id": "T31",
+                                                                  "point": [
+                                                                    31,
+                                                                    31,
+                                                                    31
+                                                                  ],
+                                                                  "axis": 0,
+                                                                  "size": 1,
+                                                                  "bbox": {
+                                                                    "min": [
+                                                                      31,
+                                                                      31,
+                                                                      31
+                                                                    ],
+                                                                    "max": [
+                                                                      31,
+                                                                      31,
+                                                                      31
+                                                                    ]
+                                                                  },
+                                                                  "left": null,
+                                                                  "right": null
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "balancedTree": {
+      "id": "T15",
+      "point": [
+        15,
+        15,
+        15
+      ],
+      "axis": 0,
+      "size": 31,
+      "bbox": {
+        "min": [
+          1,
+          1,
+          1
+        ],
+        "max": [
+          31,
+          31,
+          31
+        ]
+      },
+      "left": {
+        "id": "T08",
+        "point": [
+          8,
+          8,
+          8
+        ],
+        "axis": 1,
+        "size": 14,
+        "bbox": {
+          "min": [
+            1,
+            1,
+            1
+          ],
+          "max": [
+            14,
+            14,
+            14
+          ]
+        },
+        "left": {
+          "id": "T04",
+          "point": [
+            4,
+            4,
+            4
+          ],
+          "axis": 2,
+          "size": 7,
+          "bbox": {
+            "min": [
+              1,
+              1,
+              1
+            ],
+            "max": [
+              7,
+              7,
+              7
+            ]
+          },
+          "left": {
+            "id": "T02",
+            "point": [
+              2,
+              2,
+              2
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                1,
+                1,
+                1
+              ],
+              "max": [
+                3,
+                3,
+                3
+              ]
+            },
+            "left": {
+              "id": "T01",
+              "point": [
+                1,
+                1,
+                1
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  1,
+                  1,
+                  1
+                ],
+                "max": [
+                  1,
+                  1,
+                  1
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T03",
+              "point": [
+                3,
+                3,
+                3
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  3,
+                  3,
+                  3
+                ],
+                "max": [
+                  3,
+                  3,
+                  3
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T06",
+            "point": [
+              6,
+              6,
+              6
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                5,
+                5,
+                5
+              ],
+              "max": [
+                7,
+                7,
+                7
+              ]
+            },
+            "left": {
+              "id": "T05",
+              "point": [
+                5,
+                5,
+                5
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  5,
+                  5,
+                  5
+                ],
+                "max": [
+                  5,
+                  5,
+                  5
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T07",
+              "point": [
+                7,
+                7,
+                7
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  7,
+                  7,
+                  7
+                ],
+                "max": [
+                  7,
+                  7,
+                  7
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          }
+        },
+        "right": {
+          "id": "T12",
+          "point": [
+            12,
+            12,
+            12
+          ],
+          "axis": 2,
+          "size": 6,
+          "bbox": {
+            "min": [
+              9,
+              9,
+              9
+            ],
+            "max": [
+              14,
+              14,
+              14
+            ]
+          },
+          "left": {
+            "id": "T10",
+            "point": [
+              10,
+              10,
+              10
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                9,
+                9,
+                9
+              ],
+              "max": [
+                11,
+                11,
+                11
+              ]
+            },
+            "left": {
+              "id": "T09",
+              "point": [
+                9,
+                9,
+                9
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  9,
+                  9,
+                  9
+                ],
+                "max": [
+                  9,
+                  9,
+                  9
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T11",
+              "point": [
+                11,
+                11,
+                11
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  11,
+                  11,
+                  11
+                ],
+                "max": [
+                  11,
+                  11,
+                  11
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T14",
+            "point": [
+              14,
+              14,
+              14
+            ],
+            "axis": 0,
+            "size": 2,
+            "bbox": {
+              "min": [
+                13,
+                13,
+                13
+              ],
+              "max": [
+                14,
+                14,
+                14
+              ]
+            },
+            "left": {
+              "id": "T13",
+              "point": [
+                13,
+                13,
+                13
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  13,
+                  13,
+                  13
+                ],
+                "max": [
+                  13,
+                  13,
+                  13
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": null
+          }
+        }
+      },
+      "right": {
+        "id": "T23",
+        "point": [
+          23,
+          23,
+          23
+        ],
+        "axis": 1,
+        "size": 16,
+        "bbox": {
+          "min": [
+            16,
+            16,
+            16
+          ],
+          "max": [
+            31,
+            31,
+            31
+          ]
+        },
+        "left": {
+          "id": "T19",
+          "point": [
+            19,
+            19,
+            19
+          ],
+          "axis": 2,
+          "size": 7,
+          "bbox": {
+            "min": [
+              16,
+              16,
+              16
+            ],
+            "max": [
+              22,
+              22,
+              22
+            ]
+          },
+          "left": {
+            "id": "T17",
+            "point": [
+              17,
+              17,
+              17
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                16,
+                16,
+                16
+              ],
+              "max": [
+                18,
+                18,
+                18
+              ]
+            },
+            "left": {
+              "id": "T16",
+              "point": [
+                16,
+                16,
+                16
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  16,
+                  16,
+                  16
+                ],
+                "max": [
+                  16,
+                  16,
+                  16
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T18",
+              "point": [
+                18,
+                18,
+                18
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  18,
+                  18,
+                  18
+                ],
+                "max": [
+                  18,
+                  18,
+                  18
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T21",
+            "point": [
+              21,
+              21,
+              21
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                20,
+                20,
+                20
+              ],
+              "max": [
+                22,
+                22,
+                22
+              ]
+            },
+            "left": {
+              "id": "T20",
+              "point": [
+                20,
+                20,
+                20
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  20,
+                  20,
+                  20
+                ],
+                "max": [
+                  20,
+                  20,
+                  20
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T22",
+              "point": [
+                22,
+                22,
+                22
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  22,
+                  22,
+                  22
+                ],
+                "max": [
+                  22,
+                  22,
+                  22
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          }
+        },
+        "right": {
+          "id": "T27",
+          "point": [
+            27,
+            27,
+            27
+          ],
+          "axis": 2,
+          "size": 8,
+          "bbox": {
+            "min": [
+              24,
+              24,
+              24
+            ],
+            "max": [
+              31,
+              31,
+              31
+            ]
+          },
+          "left": {
+            "id": "T25",
+            "point": [
+              25,
+              25,
+              25
+            ],
+            "axis": 0,
+            "size": 3,
+            "bbox": {
+              "min": [
+                24,
+                24,
+                24
+              ],
+              "max": [
+                26,
+                26,
+                26
+              ]
+            },
+            "left": {
+              "id": "T24",
+              "point": [
+                24,
+                24,
+                24
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  24,
+                  24,
+                  24
+                ],
+                "max": [
+                  24,
+                  24,
+                  24
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T26",
+              "point": [
+                26,
+                26,
+                26
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  26,
+                  26,
+                  26
+                ],
+                "max": [
+                  26,
+                  26,
+                  26
+                ]
+              },
+              "left": null,
+              "right": null
+            }
+          },
+          "right": {
+            "id": "T29",
+            "point": [
+              29,
+              29,
+              29
+            ],
+            "axis": 0,
+            "size": 4,
+            "bbox": {
+              "min": [
+                28,
+                28,
+                28
+              ],
+              "max": [
+                31,
+                31,
+                31
+              ]
+            },
+            "left": {
+              "id": "T28",
+              "point": [
+                28,
+                28,
+                28
+              ],
+              "axis": 1,
+              "size": 1,
+              "bbox": {
+                "min": [
+                  28,
+                  28,
+                  28
+                ],
+                "max": [
+                  28,
+                  28,
+                  28
+                ]
+              },
+              "left": null,
+              "right": null
+            },
+            "right": {
+              "id": "T30",
+              "point": [
+                30,
+                30,
+                30
+              ],
+              "axis": 1,
+              "size": 2,
+              "bbox": {
+                "min": [
+                  30,
+                  30,
+                  30
+                ],
+                "max": [
+                  31,
+                  31,
+                  31
+                ]
+              },
+              "left": null,
+              "right": {
+                "id": "T31",
+                "point": [
+                  31,
+                  31,
+                  31
+                ],
+                "axis": 2,
+                "size": 1,
+                "bbox": {
+                  "min": [
+                    31,
+                    31,
+                    31
+                  ],
+                  "max": [
+                    31,
+                    31,
+                    31
+                  ]
+                },
+                "left": null,
+                "right": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "validation": {
+      "plain": {
+        "valid": true,
+        "size": 31,
+        "height": 31,
+        "dimension": 3,
+        "tightBoundingBoxes": true,
+        "deterministicSplits": true
+      },
+      "balanced": {
+        "valid": true,
+        "size": 31,
+        "height": 6,
+        "dimension": 3,
+        "tightBoundingBoxes": true,
+        "deterministicSplits": true
+      },
+      "balancedTimingTreeMatchesDisplayed": true,
+      "timingExcludesTraceRecording": true
+    },
+    "totalPlainInsertMs": 0.4949,
+    "totalBalancedInsertMs": 0.5058
+  },
+  "benchmarks": {
+    "metadata": {
+      "measured_at_utc": "2026-11-08T09:30:26+00:00",
+      "timer": "time.perf_counter",
+      "timing_statistic": "median of 3 repeated full query batches, reported per query",
+      "visited_nodes_method": "recorded in a separate trace-enabled pass; tracing is excluded from timed query batches",
+      "range_timing_scope": "KD-tree and brute-force timings both include result-list materialisation but neither sorts result IDs",
+      "range_volume_fraction": {
+        "size_experiment": 0.015,
+        "dimension_experiment": 0.08,
+        "note": "Each dimension's side length is volume_fraction**(1/d), subject to the [0,1]^d domain."
+      },
+      "seed_policy": "fixed seeds per case for reproducible datasets and queries; wall-clock timings still vary by run",
+      "python": "3.12.7",
+      "platform": "Windows-11-10.0.26200-SP0",
+      "processor": "AMD64 Family 26 Model 68 Stepping 0, AuthenticAMD",
+      "quick_mode": false
+    },
+    "bySize": [
+      {
+        "suite": "size",
+        "n": 250,
+        "d": 3,
+        "queries": 20,
+        "build_ms_median": 0.8748,
+        "range_kd_ms_per_query": 0.04613,
+        "range_brute_ms_per_query": 0.098665,
+        "range_speedup_kd_over_brute": 2.138847,
+        "range_mean_visited_nodes": 33,
+        "range_median_visited_nodes": 33.0,
+        "range_visited_ratio": 0.132,
+        "range_mean_reported_points": 3.7,
+        "nearest_kd_ms_per_query": 0.023935,
+        "nearest_brute_ms_per_query": 0.278155,
+        "nearest_speedup_kd_over_brute": 11.621266,
+        "nearest_mean_visited_nodes": 22.8,
+        "nearest_median_visited_nodes": 20.0,
+        "nearest_visited_ratio": 0.0912,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "size",
+        "n": 500,
+        "d": 3,
+        "queries": 20,
+        "build_ms_median": 1.3643,
+        "range_kd_ms_per_query": 0.04409,
+        "range_brute_ms_per_query": 0.197035,
+        "range_speedup_kd_over_brute": 4.468927,
+        "range_mean_visited_nodes": 40.65,
+        "range_median_visited_nodes": 39.0,
+        "range_visited_ratio": 0.0813,
+        "range_mean_reported_points": 7.85,
+        "nearest_kd_ms_per_query": 0.024285,
+        "nearest_brute_ms_per_query": 0.553925,
+        "nearest_speedup_kd_over_brute": 22.809347,
+        "nearest_mean_visited_nodes": 23.5,
+        "nearest_median_visited_nodes": 20.0,
+        "nearest_visited_ratio": 0.047,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "size",
+        "n": 1000,
+        "d": 3,
+        "queries": 20,
+        "build_ms_median": 3.0177,
+        "range_kd_ms_per_query": 0.08799,
+        "range_brute_ms_per_query": 0.428105,
+        "range_speedup_kd_over_brute": 4.865382,
+        "range_mean_visited_nodes": 77.25,
+        "range_median_visited_nodes": 77.5,
+        "range_visited_ratio": 0.07725,
+        "range_mean_reported_points": 15.85,
+        "nearest_kd_ms_per_query": 0.029235,
+        "nearest_brute_ms_per_query": 1.12462,
+        "nearest_speedup_kd_over_brute": 38.468274,
+        "nearest_mean_visited_nodes": 27.95,
+        "nearest_median_visited_nodes": 23.0,
+        "nearest_visited_ratio": 0.02795,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "size",
+        "n": 2000,
+        "d": 3,
+        "queries": 20,
+        "build_ms_median": 6.5418,
+        "range_kd_ms_per_query": 0.138055,
+        "range_brute_ms_per_query": 0.824755,
+        "range_speedup_kd_over_brute": 5.974105,
+        "range_mean_visited_nodes": 117.2,
+        "range_median_visited_nodes": 119.5,
+        "range_visited_ratio": 0.0586,
+        "range_mean_reported_points": 31.45,
+        "nearest_kd_ms_per_query": 0.03624,
+        "nearest_brute_ms_per_query": 2.284265,
+        "nearest_speedup_kd_over_brute": 63.031595,
+        "nearest_mean_visited_nodes": 32.4,
+        "nearest_median_visited_nodes": 31.0,
+        "nearest_visited_ratio": 0.0162,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      }
+    ],
+    "byDimension": [
+      {
+        "suite": "dimension",
+        "n": 512,
+        "d": 2,
+        "queries": 16,
+        "build_ms_median": 1.3256,
+        "range_kd_ms_per_query": 0.069531,
+        "range_brute_ms_per_query": 0.20765,
+        "range_speedup_kd_over_brute": 2.986427,
+        "range_mean_visited_nodes": 65.438,
+        "range_median_visited_nodes": 69.0,
+        "range_visited_ratio": 0.127808,
+        "range_mean_reported_points": 41.625,
+        "nearest_kd_ms_per_query": 0.020669,
+        "nearest_brute_ms_per_query": 0.486694,
+        "nearest_speedup_kd_over_brute": 23.547324,
+        "nearest_mean_visited_nodes": 22,
+        "nearest_median_visited_nodes": 22.0,
+        "nearest_visited_ratio": 0.042969,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "dimension",
+        "n": 512,
+        "d": 3,
+        "queries": 16,
+        "build_ms_median": 1.4385,
+        "range_kd_ms_per_query": 0.133456,
+        "range_brute_ms_per_query": 0.206706,
+        "range_speedup_kd_over_brute": 1.548869,
+        "range_mean_visited_nodes": 123,
+        "range_median_visited_nodes": 117.0,
+        "range_visited_ratio": 0.240234,
+        "range_mean_reported_points": 39,
+        "nearest_kd_ms_per_query": 0.02485,
+        "nearest_brute_ms_per_query": 0.570819,
+        "nearest_speedup_kd_over_brute": 22.970573,
+        "nearest_mean_visited_nodes": 24.25,
+        "nearest_median_visited_nodes": 22.0,
+        "nearest_visited_ratio": 0.047363,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "dimension",
+        "n": 512,
+        "d": 5,
+        "queries": 16,
+        "build_ms_median": 1.5701,
+        "range_kd_ms_per_query": 0.328662,
+        "range_brute_ms_per_query": 0.226263,
+        "range_speedup_kd_over_brute": 0.688434,
+        "range_mean_visited_nodes": 279.5,
+        "range_median_visited_nodes": 290.0,
+        "range_visited_ratio": 0.545898,
+        "range_mean_reported_points": 42.25,
+        "nearest_kd_ms_per_query": 0.065194,
+        "nearest_brute_ms_per_query": 0.751887,
+        "nearest_speedup_kd_over_brute": 11.533122,
+        "nearest_mean_visited_nodes": 44.875,
+        "nearest_median_visited_nodes": 39.0,
+        "nearest_visited_ratio": 0.087646,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "dimension",
+        "n": 512,
+        "d": 10,
+        "queries": 16,
+        "build_ms_median": 2.0984,
+        "range_kd_ms_per_query": 0.659962,
+        "range_brute_ms_per_query": 0.287269,
+        "range_speedup_kd_over_brute": 0.43528,
+        "range_mean_visited_nodes": 443.812,
+        "range_median_visited_nodes": 446.0,
+        "range_visited_ratio": 0.866821,
+        "range_mean_reported_points": 39.562,
+        "nearest_kd_ms_per_query": 0.281837,
+        "nearest_brute_ms_per_query": 1.180938,
+        "nearest_speedup_kd_over_brute": 4.190136,
+        "nearest_mean_visited_nodes": 157.875,
+        "nearest_median_visited_nodes": 164.0,
+        "nearest_visited_ratio": 0.30835,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      },
+      {
+        "suite": "dimension",
+        "n": 512,
+        "d": 20,
+        "queries": 16,
+        "build_ms_median": 2.9567,
+        "range_kd_ms_per_query": 1.101281,
+        "range_brute_ms_per_query": 0.390063,
+        "range_speedup_kd_over_brute": 0.35419,
+        "range_mean_visited_nodes": 500.438,
+        "range_median_visited_nodes": 500.5,
+        "range_visited_ratio": 0.977417,
+        "range_mean_reported_points": 40.375,
+        "nearest_kd_ms_per_query": 1.309125,
+        "nearest_brute_ms_per_query": 2.058175,
+        "nearest_speedup_kd_over_brute": 1.572176,
+        "nearest_mean_visited_nodes": 423.062,
+        "nearest_median_visited_nodes": 433.0,
+        "nearest_visited_ratio": 0.826294,
+        "range_results_match_brute": true,
+        "count_results_match_brute": true,
+        "nearest_results_match_brute": true,
+        "tree_metadata_valid": true
+      }
+    ]
+  },
+  "validation": {
+    "fixedTree": {
+      "valid": true,
+      "size": 15,
+      "height": 4,
+      "dimension": 3,
+      "tightBoundingBoxes": true,
+      "deterministicSplits": true
+    },
+    "fixedRangeMatchesExpected": true,
+    "fixedNearestMatchesExpected": true,
+    "allBenchmarkResultsMatchBrute": true
+  },
+  "artifacts": {
+    "json": "data.json",
+    "javascript": "data.js",
+    "csv": [
+      "benchmarks_by_size.csv",
+      "benchmarks_by_dimension.csv",
+      "dynamic_steps.csv"
+    ],
+    "svg": [
+      "benchmark_range_time.svg",
+      "benchmark_visited_ratio.svg",
+      "benchmark_dimension.svg",
+      "dynamic_height.svg"
+    ]
+  }
+};

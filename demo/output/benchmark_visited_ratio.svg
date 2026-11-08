@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img">
+<title>3D visited-node ratio by point count</title>
+<style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#1f2937}.title{font-size:24px;font-weight:700}.axis{font-size:14px;fill:#374151}.tick{font-size:12px;fill:#4b5563}.grid{stroke:#d1d5db;stroke-width:1}.frame{fill:#ffffff;stroke:#9ca3af;stroke-width:1.5}.line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect width="960" height="560" fill="#ffffff"/>
+<text class="title" x="82" y="38">3D visited-node ratio by point count</text>
+<rect class="frame" x="82" y="112" width="844" height="376"/>
+<line class="grid" x1="82" y1="488.00" x2="926" y2="488.00"/>
+<text class="tick" x="70" y="492.00" text-anchor="end">0</text>
+<line class="grid" x1="82" y1="412.80" x2="926" y2="412.80"/>
+<text class="tick" x="70" y="416.80" text-anchor="end">0.0285</text>
+<line class="grid" x1="82" y1="337.60" x2="926" y2="337.60"/>
+<text class="tick" x="70" y="341.60" text-anchor="end">0.0570</text>
+<line class="grid" x1="82" y1="262.40" x2="926" y2="262.40"/>
+<text class="tick" x="70" y="266.40" text-anchor="end">0.0855</text>
+<line class="grid" x1="82" y1="187.20" x2="926" y2="187.20"/>
+<text class="tick" x="70" y="191.20" text-anchor="end">0.1140</text>
+<line class="grid" x1="82" y1="112.00" x2="926" y2="112.00"/>
+<text class="tick" x="70" y="116.00" text-anchor="end">0.1426</text>
+<line class="grid" x1="82.00" y1="112" x2="82.00" y2="488"/>
+<text class="tick" x="82.00" y="512" text-anchor="middle">250</text>
+<line class="grid" x1="363.33" y1="112" x2="363.33" y2="488"/>
+<text class="tick" x="363.33" y="512" text-anchor="middle">500</text>
+<line class="grid" x1="644.67" y1="112" x2="644.67" y2="488"/>
+<text class="tick" x="644.67" y="512" text-anchor="middle">1000</text>
+<line class="grid" x1="926.00" y1="112" x2="926.00" y2="488"/>
+<text class="tick" x="926.00" y="512" text-anchor="middle">2000</text>
+<line class="line" x1="82" y1="62" x2="110" y2="62" stroke="#0f766e"/>
+<text class="axis" x="118" y="66">Range query</text>
+<polyline class="line" points="82.00,139.85 363.33,273.57 644.67,284.25 926.00,333.44" stroke="#0f766e"/>
+<circle cx="82.00" cy="139.85" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>Range query · Point count N=250 · Mean visited nodes / N=0.1320</title></circle>
+<circle cx="363.33" cy="273.57" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>Range query · Point count N=500 · Mean visited nodes / N=0.0813</title></circle>
+<circle cx="644.67" cy="284.25" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>Range query · Point count N=1000 · Mean visited nodes / N=0.0772</title></circle>
+<circle cx="926.00" cy="333.44" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>Range query · Point count N=2000 · Mean visited nodes / N=0.0586</title></circle>
+<line class="line" x1="82" y1="80" x2="110" y2="80" stroke="#d97706"/>
+<text class="axis" x="118" y="84">Nearest query</text>
+<polyline class="line" points="82.00,247.46 363.33,364.04 644.67,414.28 926.00,445.27" stroke="#d97706"/>
+<circle cx="82.00" cy="247.46" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Nearest query · Point count N=250 · Mean visited nodes / N=0.0912</title></circle>
+<circle cx="363.33" cy="364.04" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Nearest query · Point count N=500 · Mean visited nodes / N=0.0470</title></circle>
+<circle cx="644.67" cy="414.28" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Nearest query · Point count N=1000 · Mean visited nodes / N=0.0279</title></circle>
+<circle cx="926.00" cy="445.27" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Nearest query · Point count N=2000 · Mean visited nodes / N=0.0162</title></circle>
+<text class="axis" x="504.0" y="538" text-anchor="middle">Point count N</text>
+<text class="axis" transform="translate(22 300.0) rotate(-90)" text-anchor="middle">Mean visited nodes / N</text>
+</svg>

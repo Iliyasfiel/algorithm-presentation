@@ -1,0 +1,164 @@
+[
+  {
+    "page": 1,
+    "id": "cover",
+    "layout": "S01",
+    "theme": "hero light",
+    "title": "KD-tree：多维空间查询",
+    "duration": 30,
+    "purpose": "用三维点云建立空间索引直觉，并交代本次汇报的算法主线。"
+  },
+  {
+    "page": 2,
+    "id": "problem",
+    "layout": "S03",
+    "theme": "light",
+    "title": "为什么不能逐点扫描？",
+    "duration": 60,
+    "purpose": "说明重复范围查询和最近邻查询的访问瓶颈，以及预处理换访问量的目标。"
+  },
+  {
+    "page": 3,
+    "id": "partition",
+    "layout": "S05",
+    "theme": "light",
+    "title": "一层切分，一类约束",
+    "duration": 60,
+    "purpose": "解释循环选轴和中位数划分如何把多维点递归组织成空间层次。"
+  },
+  {
+    "page": 4,
+    "id": "build-example",
+    "layout": "S08",
+    "theme": "light",
+    "title": "三维点集建树",
+    "duration": 85,
+    "purpose": "用统一点集展示中位数选择、三层选轴和平衡建树过程。"
+  },
+  {
+    "page": 5,
+    "id": "build-analysis",
+    "layout": "S08",
+    "theme": "light",
+    "title": "实现与构建代价",
+    "duration": 75,
+    "purpose": "给出节点接口和递归建树片段，并区分排序建树与线性选择建树的复杂度。"
+  },
+  {
+    "page": 6,
+    "id": "range-rules",
+    "layout": "S13",
+    "theme": "hero light",
+    "title": "范围查询的三种关系",
+    "duration": 70,
+    "purpose": "用包围盒与查询盒的相交关系组织跳过、整棵接收和继续递归。"
+  },
+  {
+    "page": 7,
+    "id": "range-demo",
+    "layout": "S08",
+    "theme": "light",
+    "title": "三维范围查询回放",
+    "duration": 60,
+    "purpose": "通过统一点集展示跳过、部分相交、点数命中和整棵接收的完整过程。"
+  },
+  {
+    "page": 8,
+    "id": "range-correctness",
+    "layout": "S05",
+    "theme": "light",
+    "title": "范围计数与正确性",
+    "duration": 55,
+    "purpose": "利用包围盒不变式对三种查询分支做正确性归纳。"
+  },
+  {
+    "page": 9,
+    "id": "range-derivation",
+    "layout": "S11",
+    "theme": "light",
+    "title": "一般 d 维复杂度推导",
+    "duration": 135,
+    "purpose": "完整说明经典条件下范围查询为何达到 O_d(N^(1−1/d)+r)。"
+  },
+  {
+    "page": 10,
+    "id": "range-bounds",
+    "layout": "S08",
+    "theme": "hero light",
+    "title": "报告、计数与维度",
+    "duration": 60,
+    "purpose": "区分范围报告与范围计数，并说明二维、三维及一般维度的结论边界。"
+  },
+  {
+    "page": 11,
+    "id": "nearest",
+    "layout": "S08",
+    "theme": "light",
+    "title": "最近邻的距离下界",
+    "duration": 85,
+    "purpose": "用查询点到包围盒的最小距离决定优先顺序和子树剪枝。"
+  },
+  {
+    "page": 12,
+    "id": "static-costs",
+    "layout": "S21",
+    "theme": "light",
+    "title": "最近邻代码与查询成本",
+    "duration": 55,
+    "purpose": "汇总静态构建、存储和各查询的最坏结论，避免把不同前提混为一谈。"
+  },
+  {
+    "page": 13,
+    "id": "insertion",
+    "layout": "S08",
+    "theme": "light",
+    "title": "插入如何破坏平衡",
+    "duration": 55,
+    "purpose": "展示普通 KD-tree 插入路径，并用单调序列说明平衡可能退化为链。"
+  },
+  {
+    "page": 14,
+    "id": "rebuilding",
+    "layout": "S14",
+    "theme": "light",
+    "title": "局部重建恢复树高",
+    "duration": 85,
+    "purpose": "借鉴替罪羊树的局部重建思想，在插入路径上修复最靠近根的失衡子树。"
+  },
+  {
+    "page": 15,
+    "id": "rebuild-costs",
+    "layout": "S08",
+    "theme": "hero light",
+    "title": "重建成本与摊还分析",
+    "duration": 90,
+    "purpose": "区分单次最坏、树高与插入序列摊还成本，并推导当前重建实现的上界。"
+  },
+  {
+    "page": 16,
+    "id": "experiments",
+    "layout": "S07",
+    "theme": "light",
+    "title": "用实验验证什么",
+    "duration": 55,
+    "purpose": "把正确性验证、规模效应、维度效应与重建效果拆成可控制的实验。"
+  },
+  {
+    "page": 17,
+    "id": "applications",
+    "layout": "S19",
+    "theme": "light",
+    "title": "应用与结构选择",
+    "duration": 40,
+    "purpose": "把范围与最近邻操作对应到实际任务，并给出选择 KD-tree 前的判断维度。"
+  },
+  {
+    "page": 18,
+    "id": "closing",
+    "layout": "S10",
+    "theme": "hero light",
+    "title": "总结：结构与查询",
+    "duration": 30,
+    "purpose": "用结构、查询、分析和维护四条主线收束全部结论并进入答问。"
+  }
+]

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img">
+<title>3D range query time by point count</title>
+<style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#1f2937}.title{font-size:24px;font-weight:700}.axis{font-size:14px;fill:#374151}.tick{font-size:12px;fill:#4b5563}.grid{stroke:#d1d5db;stroke-width:1}.frame{fill:#ffffff;stroke:#9ca3af;stroke-width:1.5}.line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect width="960" height="560" fill="#ffffff"/>
+<text class="title" x="82" y="38">3D range query time by point count</text>
+<rect class="frame" x="82" y="112" width="844" height="376"/>
+<line class="grid" x1="82" y1="488.00" x2="926" y2="488.00"/>
+<text class="tick" x="70" y="492.00" text-anchor="end">0</text>
+<line class="grid" x1="82" y1="412.80" x2="926" y2="412.80"/>
+<text class="tick" x="70" y="416.80" text-anchor="end">0.1781</text>
+<line class="grid" x1="82" y1="337.60" x2="926" y2="337.60"/>
+<text class="tick" x="70" y="341.60" text-anchor="end">0.3563</text>
+<line class="grid" x1="82" y1="262.40" x2="926" y2="262.40"/>
+<text class="tick" x="70" y="266.40" text-anchor="end">0.5344</text>
+<line class="grid" x1="82" y1="187.20" x2="926" y2="187.20"/>
+<text class="tick" x="70" y="191.20" text-anchor="end">0.7126</text>
+<line class="grid" x1="82" y1="112.00" x2="926" y2="112.00"/>
+<text class="tick" x="70" y="116.00" text-anchor="end">0.8907</text>
+<line class="grid" x1="82.00" y1="112" x2="82.00" y2="488"/>
+<text class="tick" x="82.00" y="512" text-anchor="middle">250</text>
+<line class="grid" x1="363.33" y1="112" x2="363.33" y2="488"/>
+<text class="tick" x="363.33" y="512" text-anchor="middle">500</text>
+<line class="grid" x1="644.67" y1="112" x2="644.67" y2="488"/>
+<text class="tick" x="644.67" y="512" text-anchor="middle">1000</text>
+<line class="grid" x1="926.00" y1="112" x2="926.00" y2="488"/>
+<text class="tick" x="926.00" y="512" text-anchor="middle">2000</text>
+<line class="line" x1="82" y1="62" x2="110" y2="62" stroke="#2563eb"/>
+<text class="axis" x="118" y="66">KD-tree</text>
+<polyline class="line" points="82.00,468.53 363.33,469.39 644.67,450.86 926.00,429.72" stroke="#2563eb"/>
+<circle cx="82.00" cy="468.53" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree · Point count N=250 · Milliseconds per query=0.0461</title></circle>
+<circle cx="363.33" cy="469.39" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree · Point count N=500 · Milliseconds per query=0.0441</title></circle>
+<circle cx="644.67" cy="450.86" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree · Point count N=1000 · Milliseconds per query=0.0880</title></circle>
+<circle cx="926.00" cy="429.72" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree · Point count N=2000 · Milliseconds per query=0.1381</title></circle>
+<line class="line" x1="82" y1="80" x2="110" y2="80" stroke="#dc2626"/>
+<text class="axis" x="118" y="84">Brute force</text>
+<polyline class="line" points="82.00,446.35 363.33,404.83 644.67,307.29 926.00,139.85" stroke="#dc2626"/>
+<circle cx="82.00" cy="446.35" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute force · Point count N=250 · Milliseconds per query=0.0987</title></circle>
+<circle cx="363.33" cy="404.83" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute force · Point count N=500 · Milliseconds per query=0.1970</title></circle>
+<circle cx="644.67" cy="307.29" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute force · Point count N=1000 · Milliseconds per query=0.4281</title></circle>
+<circle cx="926.00" cy="139.85" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute force · Point count N=2000 · Milliseconds per query=0.8248</title></circle>
+<text class="axis" x="504.0" y="538" text-anchor="middle">Point count N</text>
+<text class="axis" transform="translate(22 300.0) rotate(-90)" text-anchor="middle">Milliseconds per query</text>
+</svg>

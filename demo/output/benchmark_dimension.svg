@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img">
+<title>Range query time across dimensions</title>
+<style>text{font-family:'Segoe UI',Arial,sans-serif;fill:#1f2937}.title{font-size:24px;font-weight:700}.axis{font-size:14px;fill:#374151}.tick{font-size:12px;fill:#4b5563}.grid{stroke:#d1d5db;stroke-width:1}.frame{fill:#ffffff;stroke:#9ca3af;stroke-width:1.5}.line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}</style>
+<rect width="960" height="560" fill="#ffffff"/>
+<text class="title" x="82" y="38">Range query time across dimensions</text>
+<rect class="frame" x="82" y="112" width="844" height="376"/>
+<line class="grid" x1="82" y1="488.00" x2="926" y2="488.00"/>
+<text class="tick" x="70" y="492.00" text-anchor="end">0</text>
+<line class="grid" x1="82" y1="412.80" x2="926" y2="412.80"/>
+<text class="tick" x="70" y="416.80" text-anchor="end">0.4446</text>
+<line class="grid" x1="82" y1="337.60" x2="926" y2="337.60"/>
+<text class="tick" x="70" y="341.60" text-anchor="end">0.8891</text>
+<line class="grid" x1="82" y1="262.40" x2="926" y2="262.40"/>
+<text class="tick" x="70" y="266.40" text-anchor="end">1.33</text>
+<line class="grid" x1="82" y1="187.20" x2="926" y2="187.20"/>
+<text class="tick" x="70" y="191.20" text-anchor="end">1.78</text>
+<line class="grid" x1="82" y1="112.00" x2="926" y2="112.00"/>
+<text class="tick" x="70" y="116.00" text-anchor="end">2.22</text>
+<line class="grid" x1="82.00" y1="112" x2="82.00" y2="488"/>
+<text class="tick" x="82.00" y="512" text-anchor="middle">2</text>
+<line class="grid" x1="293.00" y1="112" x2="293.00" y2="488"/>
+<text class="tick" x="293.00" y="512" text-anchor="middle">3</text>
+<line class="grid" x1="504.00" y1="112" x2="504.00" y2="488"/>
+<text class="tick" x="504.00" y="512" text-anchor="middle">5</text>
+<line class="grid" x1="715.00" y1="112" x2="715.00" y2="488"/>
+<text class="tick" x="715.00" y="512" text-anchor="middle">10</text>
+<line class="grid" x1="926.00" y1="112" x2="926.00" y2="488"/>
+<text class="tick" x="926.00" y="512" text-anchor="middle">20</text>
+<line class="line" x1="82" y1="62" x2="110" y2="62" stroke="#2563eb"/>
+<text class="axis" x="118" y="66">KD-tree range</text>
+<polyline class="line" points="82.00,476.24 293.00,465.43 504.00,432.41 715.00,376.36 926.00,301.71" stroke="#2563eb"/>
+<circle cx="82.00" cy="476.24" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree range · Dimension d=2 · Milliseconds per query=0.0695</title></circle>
+<circle cx="293.00" cy="465.43" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree range · Dimension d=3 · Milliseconds per query=0.1335</title></circle>
+<circle cx="504.00" cy="432.41" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree range · Dimension d=5 · Milliseconds per query=0.3287</title></circle>
+<circle cx="715.00" cy="376.36" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree range · Dimension d=10 · Milliseconds per query=0.6600</title></circle>
+<circle cx="926.00" cy="301.71" r="4" fill="#ffffff" stroke="#2563eb" stroke-width="2"><title>KD-tree range · Dimension d=20 · Milliseconds per query=1.10</title></circle>
+<line class="line" x1="82" y1="80" x2="110" y2="80" stroke="#dc2626"/>
+<text class="axis" x="118" y="84">Brute range</text>
+<polyline class="line" points="82.00,452.88 293.00,453.03 504.00,449.73 715.00,439.41 926.00,422.02" stroke="#dc2626"/>
+<circle cx="82.00" cy="452.88" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute range · Dimension d=2 · Milliseconds per query=0.2077</title></circle>
+<circle cx="293.00" cy="453.03" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute range · Dimension d=3 · Milliseconds per query=0.2067</title></circle>
+<circle cx="504.00" cy="449.73" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute range · Dimension d=5 · Milliseconds per query=0.2263</title></circle>
+<circle cx="715.00" cy="439.41" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute range · Dimension d=10 · Milliseconds per query=0.2873</title></circle>
+<circle cx="926.00" cy="422.02" r="4" fill="#ffffff" stroke="#dc2626" stroke-width="2"><title>Brute range · Dimension d=20 · Milliseconds per query=0.3901</title></circle>
+<line class="line" x1="472" y1="62" x2="500" y2="62" stroke="#0f766e"/>
+<text class="axis" x="508" y="66">KD-tree nearest</text>
+<polyline class="line" points="82.00,484.50 293.00,483.80 504.00,476.97 715.00,440.33 926.00,266.56" stroke="#0f766e"/>
+<circle cx="82.00" cy="484.50" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>KD-tree nearest · Dimension d=2 · Milliseconds per query=0.0207</title></circle>
+<circle cx="293.00" cy="483.80" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>KD-tree nearest · Dimension d=3 · Milliseconds per query=0.0249</title></circle>
+<circle cx="504.00" cy="476.97" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>KD-tree nearest · Dimension d=5 · Milliseconds per query=0.0652</title></circle>
+<circle cx="715.00" cy="440.33" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>KD-tree nearest · Dimension d=10 · Milliseconds per query=0.2818</title></circle>
+<circle cx="926.00" cy="266.56" r="4" fill="#ffffff" stroke="#0f766e" stroke-width="2"><title>KD-tree nearest · Dimension d=20 · Milliseconds per query=1.31</title></circle>
+<line class="line" x1="472" y1="80" x2="500" y2="80" stroke="#d97706"/>
+<text class="axis" x="508" y="84">Brute nearest</text>
+<polyline class="line" points="82.00,405.67 293.00,391.44 504.00,360.82 715.00,288.24 926.00,139.85" stroke="#d97706"/>
+<circle cx="82.00" cy="405.67" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Brute nearest · Dimension d=2 · Milliseconds per query=0.4867</title></circle>
+<circle cx="293.00" cy="391.44" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Brute nearest · Dimension d=3 · Milliseconds per query=0.5708</title></circle>
+<circle cx="504.00" cy="360.82" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Brute nearest · Dimension d=5 · Milliseconds per query=0.7519</title></circle>
+<circle cx="715.00" cy="288.24" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Brute nearest · Dimension d=10 · Milliseconds per query=1.18</title></circle>
+<circle cx="926.00" cy="139.85" r="4" fill="#ffffff" stroke="#d97706" stroke-width="2"><title>Brute nearest · Dimension d=20 · Milliseconds per query=2.06</title></circle>
+<text class="axis" x="504.0" y="538" text-anchor="middle">Dimension d</text>
+<text class="axis" transform="translate(22 300.0) rotate(-90)" text-anchor="middle">Milliseconds per query</text>
+</svg>

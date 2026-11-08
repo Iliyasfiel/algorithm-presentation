@@ -1,0 +1,6 @@
+suite,n,d,queries,build_ms_median,range_kd_ms_per_query,range_brute_ms_per_query,range_speedup_kd_over_brute,range_mean_visited_nodes,range_median_visited_nodes,range_visited_ratio,range_mean_reported_points,nearest_kd_ms_per_query,nearest_brute_ms_per_query,nearest_speedup_kd_over_brute,nearest_mean_visited_nodes,nearest_median_visited_nodes,nearest_visited_ratio,range_results_match_brute,count_results_match_brute,nearest_results_match_brute,tree_metadata_valid
+dimension,512,2,16,1.3256,0.069531,0.20765,2.986427,65.438,69.0,0.127808,41.625,0.020669,0.486694,23.547324,22,22.0,0.042969,True,True,True,True
+dimension,512,3,16,1.4385,0.133456,0.206706,1.548869,123,117.0,0.240234,39,0.02485,0.570819,22.970573,24.25,22.0,0.047363,True,True,True,True
+dimension,512,5,16,1.5701,0.328662,0.226263,0.688434,279.5,290.0,0.545898,42.25,0.065194,0.751887,11.533122,44.875,39.0,0.087646,True,True,True,True
+dimension,512,10,16,2.0984,0.659962,0.287269,0.43528,443.812,446.0,0.866821,39.562,0.281837,1.180938,4.190136,157.875,164.0,0.30835,True,True,True,True
+dimension,512,20,16,2.9567,1.101281,0.390063,0.35419,500.438,500.5,0.977417,40.375,1.309125,2.058175,1.572176,423.062,433.0,0.826294,True,True,True,True

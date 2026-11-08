@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+node_modules/
+.env
+.env.*
+.DS_Store
+Thumbs.db
+*.log
+# Local browser-session recordings use machine-specific paths and space IDs.
+ppt/qa/round-*.mjs
+ppt/qa/*.png
+ppt/qa/*.jpg
